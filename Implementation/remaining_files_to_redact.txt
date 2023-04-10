@@ -1,0 +1,41 @@
+Liste des fichiers à modéliser sur un diagramme de classes.
+
+# CONTROLLER
+src/main/java/com/gytmy/labyrinth/controller/KeyboardMovementController.java
+src/main/java/com/gytmy/labyrinth/controller/LabyrinthController.java
+src/main/java/com/gytmy/labyrinth/controller/LabyrinthControllerImplementation.java
+src/main/java/com/gytmy/labyrinth/controller/MovementController.java
+
+# VIEW
+src/main/java/com/gytmy/labyrinth/view/AudioMenu.java
+src/main/java/com/gytmy/labyrinth/view/Cell.java
+src/main/java/com/gytmy/labyrinth/view/EditCreateUsersPage.java
+src/main/java/com/gytmy/labyrinth/view/GameOverPanel.java
+src/main/java/com/gytmy/labyrinth/view/JPanelWithImages.java
+src/main/java/com/gytmy/labyrinth/view/LabyrinthPanel.java
+src/main/java/com/gytmy/labyrinth/view/LabyrinthView.java
+src/main/java/com/gytmy/labyrinth/view/LabyrinthViewImplementation.java
+src/main/java/com/gytmy/labyrinth/view/MenuFrameHandler.java
+src/main/java/com/gytmy/labyrinth/view/RecordPage.java
+src/main/java/com/gytmy/labyrinth/view/ScoreBoardPanel.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/ClassicPanelHandler.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/DefaultComponentBuilder.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/OneDimensionPanelHandler.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandler.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandlerFactory.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/SelectionPanel.java
+src/main/java/com/gytmy/labyrinth/view/settings/player/PlayerPanel.java
+src/main/java/com/gytmy/labyrinth/view/settings/player/PlayerSelectionPanel.java
+src/main/java/com/gytmy/labyrinth/view/settings/player/UserSelector.java
+src/main/java/com/gytmy/labyrinth/view/settings/SettingsMenu.java
+src/main/java/com/gytmy/labyrinth/view/StartMenu.java
+src/main/java/com/gytmy/labyrinth/view/TimerPanel.java
+
+#SOUND
+src/main/java/com/gytmy/sound/AudioFileManager.java
+src/main/java/com/gytmy/sound/AudioPlayer.java
+src/main/java/com/gytmy/sound/AudioRecorder.java
+src/main/java/com/gytmy/sound/AudioToFile.java
+src/main/java/com/gytmy/sound/PlayingTimer.java
+src/main/java/com/gytmy/sound/User.java
+src/main/java/com/gytmy/sound/YamlReader.java
