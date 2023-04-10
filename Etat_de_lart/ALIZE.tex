@@ -1,21 +1,21 @@
 
 \subsection{ALIZÉ}
 \label{subsec:ALIZE}
-
-\textit{ALIZÉ}\footnote{\url{https://alize.univ-avignon.fr/} et \url{https://github.com/alize-Speaker-Recognition}} est une bibliothèque opens ource de reconnaissance vocale très puissante qui permet de développer rapidement et facilement des logiciels de reconnaissance
+\textit{ALIZÉ}\footnote{\url{https://alize.univ-avignon.fr/} et \url{https://github.com/alize-Speaker-Recognition}} est une bibliothèque open source très puissante de reconnaissance vocale
+qui permet de développer rapidement et facilement des logiciels de reconnaissance vocale de haute qualité.
 vocale de haute qualité.
 
-Elle est écrite en C++, et est munit d'une interface bas niveau et aussi haut niveau, laissant une certaine liberté à l'utilisateur.
+Elle est écrite en C++, et est munit d'une interface tant bien de bas niveau que de haut niveau, laissant ainsi une certaine liberté à l'utilisateur.
 
-La base bas niveau est nommé \textit{ALIZE-CORE} qui contient toutes les fonctions utilisables, et on a au dessus \textit{LIA\_RAL} qui offre une interface plus haut niveau de celles-ci.
+La section bas niveau d'\textit{ALIZÉ} se nomme \textit{ALIZE-CORE} et contient toutes les fonctions utilisables, tandis que la partie haut niveau est \textit{LIA\_RAL} et offre une interface de celles-ci.
 
-\textit{ALIZÉ} fournit des outils nécessaire et utile pour la conception de logiciels utilisant la reconnaissance vocale.
+\textit{ALIZÉ} fournit des outils nécessaires et utiles pour la conception de logiciels utilisant la reconnaissance vocale.
 
 Elle permet par exemple de traiter des signaux audios pour pouvoir obtenir des informations utiles. Elle comprend des algorithmes de détection de début et de fin de parole, de normalisation,
 de filtrage de bruit, de reconnaissance de la parole (de commande ou en temps réel), ...
 
-Sa force est qu'elle met à disposition des modèles de reconnaissance très performants, des outils de développement complet, une interface haut niveau donc plus simple à utiliser, et
-elle prend en charge plusieurs langue telle que le français, l'anglais ou l'espagnol par exemple. Elle est aussi multiplate-forme, fonctionnant ainsi sur Linux, Windows et Mac OS par exemple.
+Sa force est qu'elle met à disposition des modèles de reconnaissance très performants, des outils de développement complets, une interface haut niveau bien plus simple à utiliser, et
+elle prend en charge plusieurs langues telles que le français, l'anglais ou l'espagnol. Elle est aussi multiplate-forme, fonctionnant ainsi sur Linux, Windows et Mac OS.
 
 Elle est aussi performante, surtout pour la reconnaissance du français, et est plus documentée que la plupart des bibliothèques de reconnaissance vocale.
 
@@ -34,16 +34,16 @@ Son installation est cependant assez complexe, ce qui peut occasionner des perte
 
     \item Open source
     \item Grande variété d'outil pour la formation et l'évaluation de modèles de reconnaissance vocale.
-    \item Hautes performances, elle est souvent utilisée pour les applications de reconnaissance vocale exigeantes en termes de performance.
-    \item Large communauté d'utilisateurs donc de nombreuses ressources en ligne et un grand nombre de personnes qui peuvent aider à résoudre les problèmes rencontrés.
+    \item Hautes performances, elle est souvent utilisée pour les applications de reconnaissance vocale exigeantes en termes de performances.
+    \item Large communauté d'utilisateurs ce qui implique de nombreuses ressources en ligne et un grand nombre de personnes qui peuvent aider à résoudre les problèmes rencontrés.
     \item Flexibilité car elle peut être utilisée pour de nombreux types de reconnaissance vocale, tels que la reconnaissance de la parole en temps réel,
           la reconnaissance de commandes vocales, la reconnaissance de mots clés, ...
 
 \end{itemize}
 
-\textbf{Désavantages :}
+\textbf{Inconvénients :}
 \begin{itemize}
-    \item Complexité ce qui demande plus de technique et de ressources dans ce domaine.
+    \item Complexe ce qui demande plus de technique et de ressources dans ce domaine.
     \item Documentation limitée
     \item Temps de développement plus long
 \end{itemize}
@@ -53,13 +53,13 @@ Son installation est cependant assez complexe, ce qui peut occasionner des perte
 \textbf{Avantages :}
 \begin{itemize}
     \item Open source
-    \item Haute performance
+    \item Hautes performances
     \item Large communauté d'utilisateurs
     \item Facilité d'utilisation
     \item Support de nombreux systèmes d'exploitation
 \end{itemize}
 
-\textbf{Désavantages :}
+\textbf{Inconvénients :}
 \begin{itemize}
     \item Documentation limitée
     \item Performances plus faibles que certaines autres bibliothèques
@@ -79,9 +79,9 @@ Son installation est cependant assez complexe, ce qui peut occasionner des perte
     \item Propose des modèles de reconnaissance pré-entraînés pour de nombreuses langues
 \end{itemize}
 
-\textbf{Désavantages :}
+\textbf{Inconvénients :}
 \begin{itemize}
-    \item Performance limitée (surtout pour les environnements bruyant et pour la reconnaissance de langue plus complexe)
+    \item Performances limitées (surtout pour les environnements bruyants et pour la reconnaissance de langues plus complexes)
     \item Configuration complexe
     \item Plus bas niveau
 \end{itemize}
@@ -90,31 +90,31 @@ Son installation est cependant assez complexe, ce qui peut occasionner des perte
 
 \subsubsection*{Conclusion des comparaisons}
 
-Nous avons donc choisis d'utiliser \textit{ALIZÉ} pour la multitude d'outils qu'elle donne. Aussi pour sa haute performance pour la reconnaissance vocale,
-elle est souvent conseillée lorsque pour le français, et aussi pour sa plus haute documentation et moins haute complexité comparé à certaines bibliothèques.
+Nous avons donc choisi d'utiliser \textit{ALIZÉ} pour la multitude d'outils qu'elle donne. De plus, elle est souvent conseillée pour sa grande capacité de reconnaissance vocale
+du français, ainsi que pour sa documentation et sa faible complexité en comparaison à d'autres bibliothèques.
 
 \subsubsection*{Fonctionnement de \textit{ALIZÉ}}
-\textit{ALIZÉ} est un logiciel dont le but est de faciliter la reconnaissance vocal qui travaille en deux niveaux:
-\begin{itemize}
-    \item Les niveau de base qui possède l'acquisition de donnes, son entree, son stockage
-    \item Les niveau plus haut qui contient les utilitaires et algorithmes a manipuler pour l'utilisateur (management de listes, initialisation du model, les map, ...)
-\end{itemize}
+\textit{ALIZÉ} est un logiciel dont le but est de faciliter la reconnaissance vocale, qui travaille sur deux niveaux distincts:
+\begin{enumerate}
+    \item Le premier possède les données acquises, l'entrée, et le stockage.
+    \item Le second, plus haut, a accès aux utilitaires et aux algorithmes qui seront manipuler par l'utilisateur (management de listes, initialisation du model, les map, ...)
+\end{enumerate}
 
 De cette manière, \textit{AlIZÉ} gère: le data, les features,  la mixture / distribution et la statistic.
 
-\paragraph*{Architecture}
+\paragraph*{Architecture} :\\
 
 \textit{ALIZÉ} possède une architecture à plusieurs couches
 
 La base est \textit{ALIZE-Core} qui est bas niveau, incluant les fonctions pour utiliser les Gaussian mixture, et des IO pour différents formats de fichier.
 
-Au dessus du core, il y a \textit{LIA\_RAL}, offrant des fonctionnalités a plus haut niveau
+Au dessus du core, il y a \textit{LIA\_RAL}, offrant des fonctionnalités de plus hauts niveaux
 Il est composé de :
 \begin{itemize}
     \item \textbf{\textit{LIA\_SpkDet}}  un set d'outils pour faire toutes les demandes requises par le système d'authentification du speaker, et du model training, normalization, ...
     \item \textbf{\textit{LIA\_SpkSeg}}  qui contient des outils pour le séquençage
     \item \textbf{\textit{LIA\_Utils}}  qui contient les outils pour manipuler les différents formats de données utilisés par \textit{ALIZÉ} (GMMs, features, ...)
-    \item \textbf{\textit{LIA\_SpkTools}}  qui donne des fonctions plus haut niveau au dessus du core
+    \item \textbf{\textit{LIA\_SpkTools}}  qui propose des fonctions plus haut niveau, au dessus du core
 
 \end{itemize}
 
