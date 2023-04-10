@@ -1,11 +1,30 @@
 \subsection{Le labyrinthe}
 \label{subsec:labyrinthe}
 
-% Pour chaque partie de l'implémentation du labyrinthe je pense présenter les fichiers .java (classes, interfaces, enums...) qui gèrent chaque secction de l'implémentation. En accompagnant chaque section d'une image de la partie pertinente du diagramme de classe.
+% Pour chaque partie de l'implémentation du labyrinthe je pense présenter les fichiers .java (classes, interfaces, enums...) qui gèrent chaque secction de l'implémentation. En accompagnant chaque section d'une image de la partie pertinente du diagramme des classes.
 
 \subsubsection{Le Modèle}
 
-Nous avons une interface 'LabyrinthModel.java' et son implémentation 'LabyrinthModelImplementation.java' qui servent à modéliser le Labyrinthe. Afin de représenter le labyrinthe, nous avons utilisé une matrice de booléens où 'true' représente un chemin et 'false' représente un mur. Les labyrinthes sont générés grâces à un générateur qui est géré par l'interface 'BoardGenerator.java' et son implémentation 'DepthFirstGenerator.java'. L'algorithme de génération utilisé est le Depth-First Search.
+Nous avons une interface 'LabyrinthModel.java' avec son implémentation 'LabyrinthModelImplementation.java' qui servent à modéliser le Labyrinthe. Afin de représenter le labyrinthe, nous avons utilisé une matrice de booléens où 'true' représente un chemin et 'false' représente un mur.
+% TODO: Ajouter une image du diagramme des classes de l'implémentation de l'interface 'LabyrinthModel.java' et de son implémentation 'LabyrinthModelImplementation.java'
+
+Les labyrinthes sont générés grâces à un générateur qui est géré par l'interface 'BoardGenerator.java' et son implémentation 'DepthFirstGenerator.java'. L'algorithme de génération utilisé est le Depth-First Search.
+% TODO: Ajouter une image du diagramme des classes de l'implémentation de l'interface 'BoardGenerator.java' et de son implémentation 'DepthFirstGenerator.java'
+
+L'enum 'GameMode.java' permet de définir les différents modes de jeux. Chaque type de jeu a sa propre implémentation de l'interface 'GameModeData.java' qui sert à définir les données des paramètres de jeu (taille, type de score, difficulté) et la classe 'GameData.java' se charge de regrouper ces données avec la liste des joueurs.
+% TODO: Ajouter une image du diagramme des classes de l'implémentation de l'enum 'GameMode.java' avec son implémentation 'GameModeData.java' et de la case 'GameData.java'
+
+Les labyrinthes sont créés grâce aux méthodes de la classe 'LabyrinthModelFactory.java' qui se charge de mettre à disposition des méthodes qui permettent de créer des labyrinthes de différentes tailles selon les modes de jeux.
+% TODO: Ajouter une image du diagramme des classes de l'implémentation de la classe 'LabyrinthModelFactory.java'
+
+En ce qui concerne des joueurs nous avons une interface 'Player.java' avec son implémentation 'PlayerImplementation.java' qui permettent de représenter un joueur. Un joueur est caractérisé par un nom, une couleur, ses coordonnées, son statut, son nombre de mouvements et le temps qu'il prend à finir le labyrinthe. Ces 2 dernières données serviront à calculer le score d'un joueur.
+%TODO : Ajouter une image du diagramme des classes de l'implémentation de l'interface 'Player.java' et de son implémentation 'PlayerImplementation.java'
+
+Pour pouvoir calculer le score des joueurs nous avons plusieurs éléments qui utilisent les données évoquées précédemment. L'interface 'ScoreCalculator.java' et ses implémentations permettent de calculer le score d'un joueur à partir d'une implmémentaion de 'ScoreInfo.java' qui se stock les informations nécessaires. La classe 'ScoreCalculatorFactory.java' se charge de créer des instances d'implmémentaions de 'ScoreCalculator.java' en fonction du type de score et des informations selon le type de score (respectivement grâce à l'enum 'ScoreType.java', et `ScoreInfo.java'). Le calcul du score se fait mathématiquement en fonction du nombre de mouvements, du temps passé et de la difficulté du labyrinthe.
+% TODO : Ajouter une image du diagramme des classes de 'ScoreCalculator.java' et de ses implémentations, de 'ScoreCalculatorFactory.java', de l'enum 'ScoreType.java' et de 'ScoreInfo.java'
+
+L'enum Direction.java permet de définir les 4 directions de déplacements.
+% TODO : Ajouter une image du diagramme des classes de l'enum 'Direction.java'
 
 \subsubsection{La vue}
 
