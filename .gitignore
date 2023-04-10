@@ -278,6 +278,7 @@ TSWLatexianTemp*
 # IDE
 .vscode
 .idea
+.DS_Store 
 
-# Pdf
-main.pdf
+# PdfM
+Main.pdf
