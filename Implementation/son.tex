@@ -14,17 +14,21 @@ Plus les modèles sont enrichis, et plus ils seront efficaces.
 Pour créer les modèles, nous avons tout d'abord besoin des paramètres fournit par \textit{SPro}.
 
 Ensuite, nous allons utiliser deux programmes afin d'améliorer la modélisation :
-- EnergyDetector qui prend des paramètres d'audios et qui renvoie dans un fichier label les différents moments où l'interlocuteur parle (pour les différencier
-à quand il ne parle pas), d'extension .lbl.
-- NormFeat qui prend les labels et les paramètres des audios afin de les normaliser, et qui renvoie de nouveaux paramètres normalisés, d'extension .norm.prm.
+\begin{itemize}
+    \item  \textit{\textbf{EnergyDetector}} qui prend des paramètres d'audios et qui renvoie dans un fichier label les différents moments où
+          l'interlocuteur parle (pour les différencier à quand il ne parle pas), d'extension .lbl.
+    \item\textit{\textbf{ NormFeat }} qui prend les labels et les paramètres des audios afin de les normaliser, et qui renvoie de
+          nouveaux paramètres normalisés d'extension \textit{.norm.prm}.
+\end{itemize}
 
-On procède alors à la modélisation du monde avec tout les paramètres du monde normalisés et des labels, afin d'obtenir son modèle qui est un GMM
+
+On procède alors à la modélisation du monde avec tout les paramètres du monde normalisés et des labels, afin d'obtenir son modèle qui est un \textbf{GMM}
 (Gaussian Mixture Model), et qui a comme extension .gmm.
 Pour cela, on utilise le programme TrainWorld de \textit{  LIA\_SpkDet}.
 
-A l'aide du modèle du monde, et des paramètres normalisés des interlocuteurs ainsi que des labels, on crée leur modèles, qui seront aussi des GMM,
-d'extension .gmm.
-Pour cela, on utilise le programme TrainTarget de \textit{ LIA\_SpkDet}.
+A l'aide du modèle du monde, et des paramètres normalisés des interlocuteurs ainsi que des labels, on crée leur modèles, qui seront aussi des \textbf{GMM},
+d'extension \textit{.gmm}.
+our cela, on utilise le programme TrainTarget de \textit{ LIA\_SpkDet}.
 
 
 \paragraph*{Reconnaissance} : \\
@@ -33,7 +37,7 @@ Maintenant que les modèles des interlocuteurs sont créés, on va les utiliser 
 
 Pour cela, on utilise le programme ComputeScore de \textit{LIA\_SpkDet}.
 
-Ce programme va prendre dans un fichier, les audios à comparés, suivis des interlocuteurs qu'on veut essayer de reconnaître. Il donnera à la fin dans un .txt toutes les données de comparaison et donc une valeur de comparaison.
+Ce programme va prendre dans un fichier, les audios à comparer, suivis des interlocuteurs qu'on veut essayer de reconnaître. Il donnera à la fin dans un \textit{.txt} toutes les données de comparaison et donc une valeur de comparaison.
 
 Pour reconnaître un interlocuteur, on utilise toutes les valeurs données, afin de tirer l'interlocuteur qui a la valeur maximum de comparaison, et dépassant
 un certain seuil (choisir arbitrairement selon les tests résultant).
@@ -41,10 +45,10 @@ un certain seuil (choisir arbitrairement selon les tests résultant).
 Cet utilisateur sera donc celui qui est reconnu.
 
 
-\paragraph*{Utilisation pour \textit{GYTMY}} : \\
-Dans notre jeu, on réalise toutes les étapes précédentes, en prenant en compte la gestion de fichier de notre jeu. Les listes utilisées pour la modélisation,
-afin de fournir les informations au programme de quels audios paramétriser, normalisés et modélisés, sont actualisés au moment où la modélisation a besoin
-d'être faites (c'est à dire quand il y a une modification dans les audios).
+\paragraph*{Utilisation dans le projet} : \\
+Dans notre jeu, on réalise toutes les étapes précédentes, en prenant en compte la gestion de fichiers de notre jeu. Les listes utilisées pour la modélisation,
+afin de fournir les informations au programme de quels audios paramétriser, normaliser et modéliser, sont actualisés au moment où la modélisation a besoin
+d'être faite (c'est-à-dire quand il y a une modification dans les audios).
 
 Lors de cette étape, tout les audios sont paramétrisés et normalisés, le modèle du monde est créé avec tout les audios disponibles.
 Les modèles des interlocuteurs (ou des mots d'interlocuteur) sont à la suite créé avec les audios séparés par utilisateur (et par mot) dans le gestionnaire.
