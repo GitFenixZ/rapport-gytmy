@@ -1,5 +1,10 @@
-\subsection{Whisper}
-\label{subsec:Whisper}
+\subsection{Reconnaissance de la parole}
+\label{subsec:Reconnaissance_parole}
+
+Une fois que nous avons réussi a reconnaître l'individu l'objectif est de savoir la commande qu'il a donné. Pour cela nous utilisons la reconnaissance de la parole
+grâce à la librairie \textit{Whisper}.
+
+\subsubsection*{Whisper}
 
 \textit{OpenAI} a conçu \textbf{un modèle de reconnaissance vocale} de pointe nommé \textit{Whisper}, formé sur un vaste ensemble de données audio diversifiées.
 \textit{Whisper} est \textbf{un modèle multitâche} qui gère plusieurs tâches, telles que la reconnaissance vocale multilingue,
@@ -11,7 +16,7 @@ De plus, il \textbf{fonctionne sur une grande variété d'appareils}. Cependant,
 L'une des principales contraintes est sa \textbf{consommation importante de puissance de traitement} pour un fonctionnement optimal,
 ce qui peut restreindre son utilisation sur des appareils aux capacités de traitement limitées.
 Par ailleurs, même si \textit{Whisper} peut opérer en mode hors ligne, il requiert tout de même une connexion Internet pour la traduction
-de la parole et l'identification de la langue.
+de la parole et l'identification de la langue (ce qui n'est pas utilisé dans notre projet).
 
 \subsubsection*{Alternatives}
 
