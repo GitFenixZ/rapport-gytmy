@@ -15,10 +15,10 @@ Les labyrinthes ont un point de départ et un point d'arrivée que tous les joue
 
 La vue du mode classique est gérée par la classe \textbf{\textit{LabyrinthClassicView.java}} qui est une extension de \textbf{\textit{LabyrintheViewImplementation.java}}.
 
-\begin{figure}[!htb]
-    \includegraphics[scale=0.3]{ressources/Implementation/Labyrinthe/Vue/Classic/Classic.png}
+\begin{figure}[!htb]%
     \centering
-    \caption{Image du mode Classique}
+    \includegraphics[scale=0.3]{ressources/Implementation/Labyrinthe/Vue/Classic/Classic.png}%
+    \caption{Image du mode Classique}%
 \end{figure}
 
 \subsubsection*{Le mode Blackout}
@@ -29,23 +29,15 @@ Ce mode de jeu est un mode de jeu où les joueurs ne peuvent pas voir le labyrin
 
 Les déplacements du joueur laissent derrière lui une trainée afin d'aider à se repérer dans le labyrinthe.
 
-\begin{figure}[!htb]
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDark.png}
-        \caption{Labyrinthe caché}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutLight.png}
-        \caption{Labyrinthe visible}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDarkParticles.png}
-        \caption{Labyrinthe caché et trainée}
-    \end{subfigure}
+\begin{figure}[!htb]%
+    \centering
+    \subfloat[\centering Labyrinthe caché]{{\includegraphics[scale=0.4]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDark.png}}}%
+    \qquad
+    \subfloat[\centering Labyrinthe visible]{{\includegraphics[scale=0.4]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutLight.png}}}%
+    \qquad
+    \subfloat[\centering Labyrinthe caché et trainée]{{\includegraphics[scale=0.4]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDarkParticles.png}}}%
 
-    \caption{Images du mode Blackout}
+    \caption{Images du mode Blackout}%
 \end{figure}
 
 \subsubsection*{Les joueurs du labyrinthe}
@@ -53,31 +45,16 @@ Les déplacements du joueur laissent derrière lui une trainée afin d'aider à 
 Comme vous avez pu le voir, les joueurs dans le labyrinthe sont reprséentés par des rectangles de couleurs différentes qui changent de taille en fonction du nombre de joueurs présents sur une seule case. Nous avons choisi cette représentation car elle est simple et facile à comprendre d'un point de vu ergonomique.
 
 \begin{figure}[!htb]
-    \begin{subfigure}[b]{0.2\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Players/1Player.png}
-        \caption{1 joueur}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.2\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Players/2Players.png}
-        \caption{2 joueurs}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.2\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Players/3Players.png}
-        \caption{3 joueurs}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.2\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Players/4Players.png}
-        \caption{4 joueurs}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.2\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Players/5Players.png}
-        \caption{5 joueurs}
-    \end{subfigure}
-
+    \centering
+    \subfloat[\centering 1 joueur]{{\includegraphics[scale=0.35]{ressources/Implementation/Labyrinthe/Vue/Players/1Player.png}}}%
+    \qquad
+    \subfloat[\centering 2 joueurs]{{\includegraphics[scale=0.35]{ressources/Implementation/Labyrinthe/Vue/Players/2Players.png}}}%
+    \qquad
+    \subfloat[\centering 3 joueurs]{{\includegraphics[scale=0.35]{ressources/Implementation/Labyrinthe/Vue/Players/3Players.png}}}%
+    \qquad
+    \subfloat[\centering 4 joueurs]{{\includegraphics[scale=0.35]{ressources/Implementation/Labyrinthe/Vue/Players/4Players.png}}}%
+    \qquad
+    \subfloat[\centering 5 joueurs]{{\includegraphics[scale=0.35]{ressources/Implementation/Labyrinthe/Vue/Players/5Players.png}}}%
     \caption{Images des joueurs dans le labyrinthe}
 \end{figure}
 
@@ -87,19 +64,12 @@ Le décompte et le timer sont affichés en haut au centre de chaque partie de je
 
 Le décompte affiché en rouge au début de la partie permet aux joueurs de se préparer avant le début de la partie. Une fois le décompte terminé, le timer affiché en blanc commence à compter le temps écoulé depuis le début de la partie.
 
-\begin{figure}[!htb]
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/CountDown.png}
-        \caption{Décompte}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/Timer.png}
-        \caption{Timer}
-    \end{subfigure}
-
-    \caption{Images du décomte et du timer}
+\begin{figure}[!htb]%
+    \centering
+    \subfloat[\centering Décompte]{{\includegraphics[scale=0.5]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/CountDown.png}}}%
+    \qquad
+    \subfloat[\centering Timer]{{\includegraphics[scale=0.5]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/Timer.png}}}%
+    \caption{Images du décomte et du timer}%
 \end{figure}
 
 % TODO: Add images of the countdown and the timer
