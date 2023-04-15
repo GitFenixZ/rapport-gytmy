@@ -15,8 +15,6 @@ src/main/java/com/gytmy/labyrinth/view/AudioMenu.java
 src/main/java/com/gytmy/labyrinth/view/settings/SettingsMenu.java
 
 ## Labyrinthe
-src/main/java/com/gytmy/labyrinth/view/TimerPanel.java
-
 src/main/java/com/gytmy/labyrinth/view/GameOverPanel.java
 src/main/java/com/gytmy/labyrinth/view/ScoreBoardPanel.java
 
