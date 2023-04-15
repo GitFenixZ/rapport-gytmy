@@ -2,10 +2,11 @@
 \label{subsubsec:vue}
 
 Chacun des deux modes de jeu possèdent une vue qui lui est propre.
-Cela a été rendu possible grâce à plusieurs classes et implémentations.
+Cela a été rendu possible grâce aux plusieurs classes et implémentations.
 
-Pricipalement, nous avons la classe abstraite LabyrinthView.view qui étendue par la classe \textbf{\textit{LabyrinthViewImplementation.java}}, cette classe possède comme attribut d'une instance de \\
-\textbf{\textit{LabyrinthPanel.java}} qui est une classe qui étend JPanel et qui est chargée de dessiner le labyrinthe à partir de cellules crées grâce à la classe \textbf{\textit{Cell.java}} qui se basent sur les données du modèle.
+Principalement, nous avons la classe abstraite \textbf{\textit{LabyrinthView.java}} qui étendue par la classe \textbf{\textit{LabyrinthViewImplementation.java}}.
+Cette dernière possède comme attribut une instance de
+\textbf{\textit{LabyrinthPanel.java}} qui est chargée de dessiner le labyrinthe à partir de cellules crées grâce à la classe \textbf{\textit{Cell.java}} qui se base sur les données du modèle.
 
 Les labyrinthes ont un point de départ et un point d'arrivée que tous les joueurs doivent atteindre.
 
@@ -42,7 +43,7 @@ Les déplacements du joueur laissent derrière lui une trainée afin d'aider à 
 
 \subsubsection*{Les joueurs du labyrinthe}
 
-L'affichage des joueurs est géré par les classes \textbf{\textit{LabyrinthPanel.java}} et \textbf{\textit{Cell.java}} en fonction de la position de leurs positions dans le labyrinthe. Ils sont reprséentés par des rectangles de couleurs différentes qui changent de taille en fonction du nombre de joueurs présents sur une seule case. Nous avons choisi cette représentation car elle est simple et facile à comprendre d'un point de vu ergonomique.
+L'affichage des joueurs est géré par les classes \textbf{\textit{LabyrinthPanel.java}} et \textbf{\textit{Cell.java}} en fonction de leurs positions dans le labyrinthe. Ils sont représentés par des rectangles de couleurs différentes qui changent de taille en fonction du nombre de joueurs présents sur une seule case. Nous avons choisi cette représentation car elle est simple et facile à comprendre d'un point de vu ergonomique.
 
 \begin{figure}[!htb]
     \centering
