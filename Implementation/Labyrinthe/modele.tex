@@ -7,12 +7,12 @@ Afin de représenter le labyrinthe, nous avons utilisé une matrice de booléens
 où '\textit{true}' représente un chemin et '\textit{false}' représente un mur.
 % TODO: Ajouter une image du diagramme des classes de l'implémentation de l'interface \textbf{\textit{LabyrinthModel.java}}' et de son implémentation '\textbf{\textit{LabyrinthModelImplementation.java}}
 
-Les labyrinthes sont générés grâces à un générateur qui est géré par
+Les labyrinthes sont générés grâce à un générateur qui est géré par
 l'interface \textbf{\textit{BoardGenerator.java}}' et son implémentation '\textbf{\textit{DepthFirstGenerator.java}}.
 L'algorithme de génération utilisé est le Depth-First Search.
 % TODO: Ajouter une image du diagramme des classes de l'implémentation de l'interface \textbf{\textit{BoardGenerator.java}}' et de son implémentation '\textbf{\textit{DepthFirstGenerator.java}}
 
-L'enum \textbf{\textit{GameMode.java}} permet de définir les différents modes de jeux.
+L'enum \textbf{\textit{GameMode.java}} permet de définir les différents modes de jeu.
 Chaque type de jeu a sa propre implémentation de l'interface \textbf{\textit{GameModeData.java}}
 qui sert à définir les données des paramètres de jeu
 (taille, type de score, difficulté) et la classe \textbf{\textit{GameData.java}} se charge de
@@ -22,7 +22,7 @@ regrouper ces données avec la liste des joueurs.
 Les labyrinthes sont créés grâce aux méthodes de la classe
 \textbf{\textit{LabyrinthModelFactory.java}} qui se charge de mettre à disposition des méthodes
 qui permettent de créer des labyrinthes de différentes tailles selon les modes
-de jeux.
+de jeu.
 % TODO: Ajouter une image du diagramme des classes de l'implémentation de la classe \textbf{\textit{LabyrinthModelFactory.java}}
 
 En ce qui concerne les joueurs, nous avons une interface \textbf{\textit{Player.java}} avec son
@@ -39,10 +39,10 @@ d'une implémentation de \textbf{\textit{ScoreInfo.java}} qui stocke les informa
 nécessaires. La classe \textbf{\textit{ScoreCalculatorFactory.java}} se charge de créer des
 instances d'implmémentaions de \textbf{\textit{ScoreCalculator.java}} en fonction du type de
 score et des informations selon le type de score (respectivement grâce à l'enum
-\textbf{\textit{ScoreType.java}}, et `ScoreInfo.java'). Le calcul du score se fait
+\textbf{\textit{ScoreType.java}}, et ScoreInfo.java). Le calcul du score se fait
 mathématiquement en fonction du nombre de mouvements, du temps passé et de la
 difficulté du labyrinthe.
 % TODO : Ajouter une image du diagramme des classes de \textbf{\textit{ScoreCalculator.java}}' et de ses implémentations, de '\textbf{\textit{ScoreCalculatorFactory.java}}', de l'enum '\textbf{\textit{ScoreType.java}}' et de '\textbf{\textit{ScoreInfo.java}}
 
-L'enum  \textbf{\textit{Direction.java}} permet de définir les quatre directions de déplacements.
+L'enum \textbf{\textit{Direction.java}} permet de définir les quatre directions de déplacements.
 % TODO : Ajouter une image du diagramme des classes de l'enum \textbf{\textit{Direction.java}}
