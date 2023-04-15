@@ -20,3 +20,30 @@ La vue du mode classique est gérée par la classe \textbf{\textit{LabyrinthClas
     \centering
     \caption{Image du mode Classique}
 \end{figure}
+
+\subsubsection*{Le mode Blackout}
+
+La vue du mode Blackout est gérée par la classe \textbf{\textit{LabyrinthBlackoutView.java}} qui est une extension de \textbf{\textit{LabyrintheViewImplementation.java}}.
+
+Ce mode de jeu est un mode de jeu où les joueurs ne peuvent pas voir le labyrinthe périodiquement. Nous avons donc deux types de vues pour ce mode de jeu, une vue où le labyrinthe est visible et une vue où le labyrinthe est caché.
+
+Les déplacements du joueur laissent derrière lui une trainée afin d'aider à se repérer dans le labyrinthe.
+
+\begin{figure}[!htb]
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDark.png}
+        \caption{Labyrinthe caché}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutLight.png}
+        \caption{Labyrinthe visible}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDarkParticles.png}
+        \caption{Labyrinthe caché et trainée}
+    \end{subfigure}
+
+    \caption{Images du mode Blackout}
+\end{figure}
