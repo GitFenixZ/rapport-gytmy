@@ -10,24 +10,27 @@ src/main/java/com/gytmy/labyrinth/controller/MovementController.java
 
 ## Menus
 src/main/java/com/gytmy/labyrinth/view/MenuFrameHandler.java
-src/main/java/com/gytmy/labyrinth/view/StartMenu.java
-src/main/java/com/gytmy/labyrinth/view/AudioMenu.java
-src/main/java/com/gytmy/labyrinth/view/settings/SettingsMenu.java
 
-src/main/java/com/gytmy/labyrinth/view/EditCreateUsersPage.java
+### Ecran d'accueil
+src/main/java/com/gytmy/labyrinth/view/StartMenu.java
 src/main/java/com/gytmy/labyrinth/view/JPanelWithImages.java
-src/main/java/com/gytmy/labyrinth/view/RecordPage.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/ClassicPanelHandler.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/DefaultComponentBuilder.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/OneDimensionPanelHandler.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandler.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandlerFactory.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/SelectionPanel.java
+
+### Ecran de parametrage
+src/main/java/com/gytmy/labyrinth/view/settings/SettingsMenu.java
+#### Joueur
 src/main/java/com/gytmy/labyrinth/view/settings/player/PlayerPanel.java
 src/main/java/com/gytmy/labyrinth/view/settings/player/PlayerSelectionPanel.java
 src/main/java/com/gytmy/labyrinth/view/settings/player/UserSelector.java
 
+#### Mode de jeu
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/SelectionPanel.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandler.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandlerFactory.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/ClassicPanelHandler.java
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/DefaultComponentBuilder.java
+
 #SOUND
+## Modele
 src/main/java/com/gytmy/sound/AudioFileManager.java
 src/main/java/com/gytmy/sound/AudioPlayer.java
 src/main/java/com/gytmy/sound/AudioRecorder.java
@@ -35,3 +38,8 @@ src/main/java/com/gytmy/sound/AudioToFile.java
 src/main/java/com/gytmy/sound/PlayingTimer.java
 src/main/java/com/gytmy/sound/User.java
 src/main/java/com/gytmy/sound/YamlReader.java
+
+## Vue
+src/main/java/com/gytmy/labyrinth/view/EditCreateUsersPage.java
+src/main/java/com/gytmy/labyrinth/view/RecordPage.java
+src/main/java/com/gytmy/labyrinth/view/AudioMenu.java
