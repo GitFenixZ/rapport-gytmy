@@ -8,25 +8,6 @@ src/main/java/com/gytmy/labyrinth/controller/MovementController.java
 
 # VIEW
 
-## Menus
-src/main/java/com/gytmy/labyrinth/view/MenuFrameHandler.java
-
-### Ecran d'accueil
-src/main/java/com/gytmy/labyrinth/view/StartMenu.java
-src/main/java/com/gytmy/labyrinth/view/JPanelWithImages.java
-
-### Ecran de parametrage
-src/main/java/com/gytmy/labyrinth/view/settings/SettingsMenu.java
-#### Joueur
-src/main/java/com/gytmy/labyrinth/view/settings/player/PlayerPanel.java
-src/main/java/com/gytmy/labyrinth/view/settings/player/PlayerSelectionPanel.java
-src/main/java/com/gytmy/labyrinth/view/settings/player/UserSelector.java
-
-#### Mode de jeu
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/SelectionPanel.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandler.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/PanelHandlerFactory.java
-src/main/java/com/gytmy/labyrinth/view/settings/gamemode/ClassicPanelHandler.java
 src/main/java/com/gytmy/labyrinth/view/settings/gamemode/DefaultComponentBuilder.java
 
 #SOUND
