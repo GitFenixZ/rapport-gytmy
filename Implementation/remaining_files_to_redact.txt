@@ -14,11 +14,6 @@ src/main/java/com/gytmy/labyrinth/view/StartMenu.java
 src/main/java/com/gytmy/labyrinth/view/AudioMenu.java
 src/main/java/com/gytmy/labyrinth/view/settings/SettingsMenu.java
 
-## Labyrinthe
-src/main/java/com/gytmy/labyrinth/view/GameOverPanel.java
-src/main/java/com/gytmy/labyrinth/view/ScoreBoardPanel.java
-
-
 src/main/java/com/gytmy/labyrinth/view/EditCreateUsersPage.java
 src/main/java/com/gytmy/labyrinth/view/JPanelWithImages.java
 src/main/java/com/gytmy/labyrinth/view/RecordPage.java
