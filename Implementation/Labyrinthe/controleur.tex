@@ -31,6 +31,7 @@ Les différents éléments graphiques tels que le GIF et les images des boutons 
     \caption{L'écran d'accueil}
     \label{fig:StartMenu}
 \end{figure}
+\FloatBarrier
 
 \paragraph{Les paramètres audio}
 
@@ -46,6 +47,7 @@ Les règles du jeu sont affichées en anglais dans une fenêtre qui se superpose
     \caption{Les règles du jeu}
     \label{fig:Rules}
 \end{figure}
+\FloatBarrier
 
 \paragraph{La création de partie}
 
@@ -55,12 +57,13 @@ La création de la partie se décompose en plusieurs étapes et dispose de plusi
 
 Le menu déroulant permet de choisir entre les différents modes de jeu disponibles. Il est géré par la classe SelectionPanel.java.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \subfloat{\includegraphics[scale=0.5]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_ModeList.png}}%
     \caption{Menu déroulant des modes de jeu}
     \label{fig:ModeSelection}
 \end{figure}
+\FloatBarrier
 
 Pour les afficher les menus des différents modes de jeu, nous avons des classes qui permettent de gérer les différents panels concernés. Ces classes sont des implémentations de l'interface PanelHandler.java et sont créées grâce à la classe PanelHandlerFactory.java.
 
@@ -68,23 +71,25 @@ Pour les afficher les menus des différents modes de jeu, nous avons des classes
 
 Grâce à la classe ClassicPanelHandler.java, nous avons à disposition deux entrées textes permettent de choisir la taille du labyrinthe.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \includegraphics[scale=0.5]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_ClassicMode.png}
     \caption{Paramètres du mode classique}
     \label{fig:ClassicMode}
 \end{figure}
+\FloatBarrier
 
 \subparagraph*{Le mode Blackout}
 
 Grâce à la classe BlackoutPanelHandler.java, le mode Blackout possède 3 difficultés : EASY, MEDIUM et HARD qu'on peut sélectionner grâce à un menu déroulant.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \includegraphics[scale=0.5]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_BlackoutMode_Difficulty.png}
     \caption{Paramètres du mode Blackout}
     \label{fig:BlackoutModeDifficulty}
 \end{figure}
+\FloatBarrier
 
 \subparagraph*{La préparation des joueurs}
 
@@ -92,16 +97,17 @@ Grâce aux classes PlayerPanel.java, PlayerSelectionPanel.java et UserSelector.j
 
 Tout d'abord pour ajouter un joueur, on clique sur une case "+". Une case de couleur s'affichera. Ensuite on choisit le nom du joueur dans la liste déroulante. Enfin il faut confirmer que le joueur est prêt en cliquant sur sa case.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
-    \subfloat[\centering Joueur pas prêt]{\includegraphics[scale=0.2]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_NotReady.png}}%
+    \subfloat[\centering Joueur pas prêt]{\includegraphics[scale=0.4]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_NotReady.png}}%
     \qquad
-    \subfloat[\centering Liste des joueurs disponibles]{\includegraphics[scale=0.2]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_PlayerList.png}}%
+    \subfloat[\centering Liste des joueurs disponibles]{\includegraphics[scale=0.4]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_PlayerList.png}}%
     \qquad
-    \subfloat[\centering Joueur prêt]{\includegraphics[scale=0.2]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_Ready.png}}%
+    \subfloat[\centering Joueur prêt]{\includegraphics[scale=0.4]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_Ready.png}}%
     \caption{Ajout d'un joueur}
     \label{fig:AddPlayer}
 \end{figure}
+\FloatBarrier
 
 \paragraph{Lancement de la partie}
 
