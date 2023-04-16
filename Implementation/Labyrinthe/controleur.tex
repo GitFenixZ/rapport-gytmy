@@ -83,3 +83,20 @@ Grâce à la classe DefaultComponentBuilder.java, le mode Blackout possède 3 di
     \caption{Paramètres du mode Blackout}
     \label{fig:BlackoutModeDifficulty}
 \end{figure}
+
+\subparagraph*{La préparation des joueurs}
+
+Grâce aux classes PlayerPanel.java, PlayerSelectionPanel.java et UserSelector.java, nous pouvons choisir le nombre de joueurs, leur couleur et leur nom parmis la liste des joueurs qui ont déjà été crées précédemment.
+
+Tout d'abord pour ajouter un joueur, on clique sur une case "+". Une case de couleur s'affichera. Ensuite on choisit le nom du joueur dans la liste déroulante. Enfin il faut confirmer que le joueur est prêt en cliquant sur sa case.
+
+\begin{figure}
+    \centering
+    \subfloat[\centering Joueur pas prêt]{\includegraphics[scale=0.2]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_NotReady.png}}%
+    \qquad
+    \subfloat[\centering Liste des joueurs disponibles]{\includegraphics[scale=0.2]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_PlayerList.png}}%
+    \qquad
+    \subfloat[\centering Joueur prêt]{\includegraphics[scale=0.2]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_Ready.png}}%
+    \caption{Ajout d'un joueur}
+    \label{fig:AddPlayer}
+\end{figure}
