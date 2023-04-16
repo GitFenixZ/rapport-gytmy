@@ -51,7 +51,7 @@ La création de la partie se décompose en plusieurs étapes et dispose de plusi
 
 \subparagraph*{Le choix du mode de jeu}
 
-Le menu déroulant permet de choisir entre les différents modes de jeu disponibles.
+Le menu déroulant permet de choisir entre les différents modes de jeu disponibles. Il est géré par la classe SelectionPanel.java.
 
 \begin{figure}
     \centering
@@ -59,3 +59,5 @@ Le menu déroulant permet de choisir entre les différents modes de jeu disponib
     \caption{Menu déroulant des modes de jeu}
     \label{fig:ModeSelection}
 \end{figure}
+
+Pour les afficher les menus des différents modes de jeu, nous avons des classes qui permettent de gérer les différents panels concernés. Ces classes sont des implémentations de l'interface PanelHandler.java et sont créées grâce à la classe PanelHandlerFactory.java.
