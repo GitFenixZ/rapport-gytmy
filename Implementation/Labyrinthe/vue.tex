@@ -25,15 +25,27 @@ La vue du mode Blackout (\ref{fig:BlackoutModeLabyrinth} est gérée par la clas
 
 C'est un mode de jeu où les joueurs ne peuvent pas voir le labyrinthe périodiquement. Nous avons donc deux types de vues pour ce mode de jeu : une vue où le labyrinthe est visible, et une vue où le labyrinthe est caché.
 
-Les déplacements du joueur laissent derrière lui une traînée afin de l'aider à se repérer dans le labyrinthe.
+Lorsque le labyrinthe est caché, les déplacements du joueur laissent derrière lui une traînée afin de l'aider à se repérer dans le labyrinthe.
 
 \begin{figure}[!htb]%
     \centering
-    \subfloat[\centering Labyrinthe caché]{{\includegraphics[width=4.4cm]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDark.png}}}%
+    \begin{subfigure}{4.3cm}
+        \includegraphics[width=4.3cm]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDark.png}%
+        \caption{Labyrinthe caché}
+        \label{fig:HiddenLabyrinth}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering Labyrinthe visible]{{\includegraphics[width=4.4cm]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutLight.png}}}%
+    \begin{subfigure}{4.3cm}
+        \includegraphics[width=4.3cm]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutLight.png}%
+        \caption{Labyrinthe visible}
+        \label{fig:VisibleLabyrinth}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering Labyrinthe caché et trainée]{{\includegraphics[width=4.4cm]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDarkParticles.png}}}%
+    \begin{subfigure}{4.3cm}
+        \includegraphics[width=4.3cm]{ressources/Implementation/Labyrinthe/Vue/Blackout/BlackoutDarkParticles.png}%
+        \caption{Traînée}
+        \label{fig:HiddenLabyrinthWithParticles}
+    \end{subfigure}
     \caption{Images du mode Blackout}%
     \label{fig:BlackoutModeLabyrinth}
 \end{figure}
@@ -45,15 +57,35 @@ L'affichage des joueurs (\ref{fig:PlayersInLabyrinth} est géré par les classes
 
 \begin{figure}[!htb]
     \centering
-    \subfloat[\centering 1 joueur]{{\includegraphics[width=2.3cm]{ressources/Implementation/Labyrinthe/Vue/Players/1Player.png}}}%
+    \begin{subfigure}{2.2cm}
+        \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/1Player.png}%
+        \caption{1 joueur}
+        \label{fig:1Player}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering 2 joueurs]{{\includegraphics[width=2.3cm]{ressources/Implementation/Labyrinthe/Vue/Players/2Players.png}}}%
+    \begin{subfigure}{2.2cm}
+        \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/2Players.png}%
+        \caption{2 joueur}
+        \label{fig:2Players}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering 3 joueurs]{{\includegraphics[width=2.3cm]{ressources/Implementation/Labyrinthe/Vue/Players/3Players.png}}}%
+    \begin{subfigure}{2.2cm}
+        \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/3Players.png}%
+        \caption{3 joueur}
+        \label{fig:3Players}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering 4 joueurs]{{\includegraphics[width=2.3cm]{ressources/Implementation/Labyrinthe/Vue/Players/4Players.png}}}%
+    \begin{subfigure}{2.2cm}
+        \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/4Players.png}%
+        \caption{4 joueur}
+        \label{fig:4Players}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering 5 joueurs]{{\includegraphics[width=2.3cm]{ressources/Implementation/Labyrinthe/Vue/Players/5Players.png}}}%
+    \begin{subfigure}{2.2cm}
+        \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/5Players.png}%
+        \caption{5 joueurs}
+        \label{fig:5Players}
+    \end{subfigure}
     \caption{Images des joueurs dans le labyrinthe}
     \label{fig:PlayersInLabyrinth}
 \end{figure}
@@ -65,9 +97,17 @@ Le décompte et le timer (\ref{fig:CountdownAndTimer} sont affichés en haut au 
 
 \begin{figure}[!htb]%
     \centering
-    \subfloat[\centering Décompte]{{\includegraphics[width=5cm]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/CountDown.png}}}%
+    \begin{subfigure}{5cm}
+        \includegraphics[width=5cm]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/CountDown.png}%
+        \caption{Décompte}
+        \label{fig:Countdown}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering Timer]{{\includegraphics[width=5cm]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/Timer.png}}}%
+    \begin{subfigure}{5cm}
+        \includegraphics[width=5cm]{ressources/Implementation/Labyrinthe/Vue/CountdownTimer/Timer.png}%
+        \caption{Timer}
+        \label{fig:Timer}
+    \end{subfigure}
     \caption{Images du décompte et du timer}%
     \label{fig:CountdownAndTimer}
 \end{figure}

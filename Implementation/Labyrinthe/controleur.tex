@@ -59,7 +59,7 @@ Le menu déroulant permet de choisir entre les différents modes de jeu disponib
 
 \begin{figure}[h!]
     \centering
-    \subfloat{\includegraphics[width=10cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_ModeList.png}}%
+    \includegraphics[width=10cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_ModeList.png}%
     \caption{Menu déroulant des modes de jeu}
     \label{fig:ModeSelection}
 \end{figure}
@@ -101,11 +101,23 @@ Tout d'abord, pour ajouter un joueur, on clique sur une case "+". Une case de co
 
 \begin{figure}[h!]
     \centering
-    \subfloat[\centering Joueur pas prêt]{\includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_NotReady.png}}%
+    \begin{subfigure}{6.5cm}
+        \includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_NotReady.png}%
+        \caption{Joueur pas prêt}
+        \label{fig:PlayerNotReady}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering Liste des joueurs disponibles]{\includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_PlayerList.png}}%
+    \begin{subfigure}{6.5cm}
+        \includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_PlayerList.png}%
+        \caption{Liste des joueurs disponibles}
+        \label{fig:PlayersAvailable}
+    \end{subfigure}
     \qquad
-    \subfloat[\centering Joueur prêt]{\includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_Ready.png}}%
+    \begin{subfigure}{6.5cm}
+        \includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_Ready.png}%
+        \caption{Joueur prêt}
+        \label{fig:PlayerReady}
+    \end{subfigure}
     \caption{Ajout d'un joueur}
     \label{fig:PlayerSelection}
 \end{figure}
