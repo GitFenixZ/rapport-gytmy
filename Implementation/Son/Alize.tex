@@ -15,10 +15,10 @@ Pour créer les modèles, nous avons tout d'abord besoin des paramètres fournit
 
 Ensuite, nous allons utiliser deux programmes afin d'améliorer la modélisation :
 \begin{itemize}
-      \item  \textit{\textbf{EnergyDetector}} qui prend des paramètres d'audios et qui renvoie dans un fichier label les différents moments où
-            l'interlocuteur parle (pour les différencier à quand il ne parle pas), d'extension .lbl.
-      \item\textit{\textbf{ NormFeat }} qui prend les labels et les paramètres des audios afin de les normaliser, et qui renvoie de
-            nouveaux paramètres normalisés d'extension \textit{.norm.prm}.
+    \item  \textit{\textbf{EnergyDetector}} qui prend des paramètres d'audios et qui renvoie dans un fichier label les différents moments où
+          l'interlocuteur parle (pour les différencier à quand il ne parle pas), d'extension .lbl.
+    \item\textit{\textbf{ NormFeat }} qui prend les labels et les paramètres des audios afin de les normaliser, et qui renvoie de
+          nouveaux paramètres normalisés d'extension \textit{.norm.prm}.
 \end{itemize}
 
 
@@ -57,4 +57,13 @@ La modélisation se fait dans fichier \textit{ src/main/exe/model} qui contient 
 
 La reconnaissance, enfin, se fait en comparant tout les modèles des interlocuteurs avec les paramètres normalisés de l'audio émis pour une commande dans la partie : currentAudio.
 
-A la fin, si un interlocuteur qui a la valeur la plus haute de comparaison, atteint un certain seuil, ce joueur jouera la commande données.
+À la fin, si un interlocuteur qui a la valeur la plus haute de comparaison, atteint un certain seuil, ce joueur jouera la commande données.
+
+
+\paragraph*{Intégration en Java} : \\
+Afin de gérer toute la partie audio, nous avons crée une classe \textbf{\textit{ModelManager}} qui s'occupe de la modélisation et de la reconnaissance. Elle peut exécuter les programmes de \textit{Alizé} et de \textit{SPro} grace à la classe \textbf{\textit{RunSH}}. L'objectif de \textbf{\textit{ModelManager}} est , non seulement l'execution des programmes, mais aussi la gestion des fichiers et des listes de fichiers à utiliser pour la modélisation et la reconnaissance, ces fonctions sont partagées avec la classe \textbf{\textit{AudioManager}} qui s'occupe de la partie audio.
+
+Comment obtenir un résultat? Une fois que Alizé a fait son travail il faut interpreter le résultat. Ce procédé est réalisé par les classes \textbf{\textit{AlizeRecognitionResultParse}}, qui s'occupe purement de parser le résultat de la reconnaissance, et \textbf{\textit{AudioRecognitionResult}} qui s'occupe de la gestion des résultats de reconnaissance.
+
+
+%TODO: insert more information and more details about the implementation of the audio recognition
