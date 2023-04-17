@@ -23,6 +23,12 @@
 
 \usepackage{placeins}
 
+% define a new command for vertically centered images
+\newcommand{\vcenteredinclude}[2][]{%
+    \begingroup
+    \setbox0=\hbox{\includegraphics[#1]{#2}}%
+    \parbox{\wd0}{\raisebox{\dimexpr.5\ht0-.5\dp0}{\box0}}%
+    \endgroup}
 
 \begin{document}
 
