@@ -11,7 +11,7 @@ Afin de garantir le bon fonctionnement de notre application, nous avons impléme
 
 Afin de gérer la fenêtre de notre jeu et de naviguer entre les différents menus, nous avons crée la classe \textbf{\textit{MenuFrameHandler.java}} Cette classe se charge de changer le \textbf{\textit{JPanel}} de la fenêtre principale de notre application qui est une \textbf{\textit{JFrame}}.
 
-\paragraph{L'écran d'accueil}
+\paragraph{L'écran d'accueil} (\ref{fig:StartMenu})
 
 Nous avons un écran d'accueil, géré par la classe \textbf{\textit{StartMenu.java}}, qui possède des boutons pour:
 
@@ -33,7 +33,7 @@ Les différents éléments graphiques tels que le GIF et les images des boutons 
 \end{figure}
 \FloatBarrier
 
-\paragraph{Les paramètres audio}
+\paragraph{Les paramètres audio} (\ref{fig:Rules})
 
 La vue des paramètres audio sera abordée dans la section \ref{subsec:son}.
 
@@ -53,7 +53,7 @@ Les règles du jeu sont affichées en anglais dans une fenêtre qui se superpose
 
 La création de la partie se décompose en plusieurs étapes et dispose de plusieurs éléments graphiques afin de permettre à l'utilisateur de choisir les paramètres de la partie qu'il souhaite jouer (nombre de joueurs, difficulté, etc.) le plus facilement possible. Cela est rendu possible par la classe \textbf{\textit{SettingsMenu.java}} qui gère l'ensemble des menus de paramétrage de la partie.
 
-\subparagraph*{Le choix du mode de jeu}
+\subparagraph*{Le choix du mode de jeu} (\ref{fig:ModeSelection})
 
 Le menu déroulant permet de choisir entre les différents modes de jeu disponibles. Il est géré par la classe \textbf{\textit{SelectionPanel.java}}.
 
@@ -67,7 +67,7 @@ Le menu déroulant permet de choisir entre les différents modes de jeu disponib
 
 Pour les afficher les menus des différents modes de jeu, nous avons des classes qui permettent de gérer les différents panels concernés. Ces classes sont des implémentations de l'interface  \textbf{\textit{PanelHandler.java}} et sont créées grâce à la classe  \textbf{\textit{PanelHandlerFactory.java}}.
 
-\subparagraph*{Le mode Classique}
+\subparagraph*{Le mode Classique} (\ref{fig:ClassicMode})
 
 Grâce à la classe \textbf{\textit{ClassicPanelHandler.java}}, nous avons à disposition deux entrées texte permettant de choisir la taille du labyrinthe.
 
@@ -79,7 +79,7 @@ Grâce à la classe \textbf{\textit{ClassicPanelHandler.java}}, nous avons à di
 \end{figure}
 \FloatBarrier
 
-\subparagraph*{Le mode Blackout}
+\subparagraph*{Le mode Blackout} (\ref{fig:BlackoutModeDifficulty})
 
 Grâce à la classe \textbf{\textit{BlackoutPanelHandler.java}}, le mode Blackout possède 3 difficultés : \textbf{\textit{EASY}}, \textbf{\textit{MEDIUM}} et \textbf{\textit{HARD}} qu'on peut sélectionner grâce à un menu déroulant.
 
@@ -91,7 +91,9 @@ Grâce à la classe \textbf{\textit{BlackoutPanelHandler.java}}, le mode Blackou
 \end{figure}
 \FloatBarrier
 
-\subparagraph*{La préparation des joueurs}
+\newpage
+
+\subparagraph*{La préparation des joueurs} (\ref{fig:PlayerSelection})
 
 Grâce aux classes \textbf{\textit{PlayerPanel.java}}, \textbf{\textit{PlayerSelectionPanel.java}} et \textbf{\textit{UserSelector.java}}, nous pouvons choisir le nombre de joueurs, leur couleur et leur nom parmi la liste des joueurs qui ont déjà été crées précédemment.
 
@@ -99,13 +101,13 @@ Tout d'abord, pour ajouter un joueur, on clique sur une case "+". Une case de co
 
 \begin{figure}[h!]
     \centering
-    \subfloat[\centering Joueur pas prêt]{\includegraphics[width=10cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_NotReady.png}}%
+    \subfloat[\centering Joueur pas prêt]{\includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_NotReady.png}}%
     \qquad
-    \subfloat[\centering Liste des joueurs disponibles]{\includegraphics[width=10cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_PlayerList.png}}%
+    \subfloat[\centering Liste des joueurs disponibles]{\includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_PlayerList.png}}%
     \qquad
-    \subfloat[\centering Joueur prêt]{\includegraphics[width=10cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_Ready.png}}%
+    \subfloat[\centering Joueur prêt]{\includegraphics[width=6.5cm]{ressources/Implementation/Labyrinthe/Controleur/SettingsMenu_Ready.png}}%
     \caption{Ajout d'un joueur}
-    \label{fig:AddPlayer}
+    \label{fig:PlayerSelection}
 \end{figure}
 \FloatBarrier
 
