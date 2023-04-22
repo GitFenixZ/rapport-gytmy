@@ -1,10 +1,15 @@
-\subsubsection*{Whisper}
+\subsubsection{Whisper}
 \label{sec:whisperImpl}
 
-\paragraph*{Intégration en Java} : \\
+\paragraph*{Utilisation du client Whisper} : \\
 
-Afin d'intégrer le programme \textit{Whisper} dans notre projet, nous avons dû créer une classe Java qui permet de lancer le programme \textit{Whisper} et de
-récupérer les résultats de la reconnaissance, cette classe est simplement nommée \textbf{\textit{Whisper}} . Pour parser le résultat de la reconnaissance de
-\textit{Whisper}, nous avons crée une classe outil \textbf{\textit{JsonParser}}, qui est capable de parser un texte en format \textit{JSON} et de le
-transformer en un objet Java. Nous avons aussi une classe \textbf{\textit{WhisperResult}} qui permet de stocker les résultats de la reconnaissance de
-\textit{Whisper}.
+Suite à l'installation de Whisper, un client est accessible depuis le terminal, faisant office d'interface avec le modèle Whisper d'OpenAI. 
+Pour faciliter son utilisation et optimiser les paramètres, un script bash nommé \textbf{whisper.sh} a été mis en place.
+
+En utilisant Whisper sur un fichier audio et en fonction des paramètres prédéfinis, un fichier JSON est généré, contenant les informations cruciales extraites du fichier audio d'origine.
+
+\paragraph*{Intégration avec Java} : \\
+
+L'application accède aux fonctionnalités de Whisper grâce à la classe \textbf{Whisper.java}, qui prend en charge l'exécution du script bash et la récupération du résultat de la transcription. 
+Une fois le processus effectué par Whisper, le texte transcrit est récupéré à l'aide d'un parseur JSON provenant de la bibliothèque Jackson, préalablement intégrée au projet. 
+Ce parseur exploite le modèle \textbf{WhisperResult.java}, faisant office de structure pour le fichier JSON, pour atteindre son objectif.
