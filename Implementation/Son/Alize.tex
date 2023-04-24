@@ -23,7 +23,7 @@ Ensuite, nous allons utiliser deux programmes afin d'améliorer la modélisation
 
 
 On procède alors à la modélisation du monde avec tout les paramètres du monde normalisés et des labels, afin d'obtenir son modèle qui est un \textbf{GMM}
-(Gaussian Mixture Model), et qui a comme extension .gmm.
+(Gaussian Mixture Model), et qui a comme extension \textit{.gmm}.
 Pour cela, on utilise le programme TrainWorld de \textit{  LIA\_SpkDet}.
 
 A l'aide du modèle du monde, et des paramètres normalisés des interlocuteurs ainsi que des labels, on crée leur modèles, qui seront aussi des \textbf{GMM},
@@ -37,7 +37,8 @@ Maintenant que les modèles des interlocuteurs sont créés, on va les utiliser 
 
 Pour cela, on utilise le programme ComputeScore de \textit{LIA\_SpkDet}.
 
-Ce programme va prendre dans un fichier, les audios à comparer, suivis des interlocuteurs qu'on veut essayer de reconnaître. Il donnera à la fin dans un \textit{.txt} toutes les données de comparaison et donc une valeur de comparaison.
+Ce programme va prendre dans un fichier, les audios à comparer, suivis des interlocuteurs qu'on veut essayer de reconnaître. Il donnera à la fin dans un \textit{.txt}
+ toutes les données de comparaison et donc une valeur de comparaison.
 
 Pour reconnaître un interlocuteur, on utilise toutes les valeurs données, afin de tirer l'interlocuteur qui a la valeur maximum de comparaison, et dépassant
 un certain seuil (choisir arbitrairement selon les tests résultant).
