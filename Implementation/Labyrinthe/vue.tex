@@ -4,14 +4,14 @@
 Chacun des deux modes de jeu possèdent une vue qui lui est propre.
 Cela a été rendu possible grâce aux plusieurs classes et implémentations.
 
-Principalement, nous avons la classe abstraite \textbf{\textit{LabyrinthView.java}} qui est étendue par la classe \textbf{\textit{LabyrinthViewImplementation.java}}.
+Principalement, nous avons la classe abstraite \textbf{\textit{LabyrinthView}} qui est étendue par la classe \textbf{\textit{LabyrinthViewImplementation}}.
 Cette dernière possède comme attribut une instance de
-\textbf{\textit{LabyrinthPanel.java}} qui est chargée de dessiner le labyrinthe à partir de cellules crées grâce à la classe \textbf{\textit{Cell.java}} qui se base sur les données du modèle.
+\textbf{\textit{LabyrinthPanel}} qui est chargée de dessiner le labyrinthe à partir de cellules crées grâce à la classe \textbf{\textit{Cell}} qui se base sur les données du modèle.
 
 Les labyrinthes ont un point de départ et un point d'arrivée que tous les joueurs doivent atteindre.
 \subsubsection*{Le mode Classique}
 
-La vue du mode classique (\ref{fig:ClassicModeLabyrinth}) est gérée par la classe \textbf{\textit{LabyrinthClassicView.java}} qui est une extension de \textbf{\textit{LabyrintheViewImplementation.java}}).
+La vue du mode classique (\ref{fig:ClassicModeLabyrinth}) est gérée par la classe \textbf{\textit{LabyrinthClassicView}} qui est une extension de \textbf{\textit{LabyrintheViewImplementation}}).
 
 \begin{figure}[!htb]%
     \centering
@@ -21,7 +21,7 @@ La vue du mode classique (\ref{fig:ClassicModeLabyrinth}) est gérée par la cla
 \end{figure}
 \subsubsection*{Le mode Blackout}
 
-La vue du mode Blackout (\ref{fig:BlackoutModeLabyrinth}) est gérée par la classe \textbf{\textit{LabyrinthBlackoutView.java}} qui est une extension de \textbf{\textit{LabyrintheViewImplementation.java}}).
+La vue du mode Blackout (\ref{fig:BlackoutModeLabyrinth}) est gérée par la classe \textbf{\textit{LabyrinthBlackoutView}} qui est une extension de \textbf{\textit{LabyrintheViewImplementation}}).
 
 C'est un mode de jeu où les joueurs ne peuvent pas voir le labyrinthe périodiquement. Nous avons donc deux types de vues pour ce mode de jeu : une vue où le labyrinthe est visible, et une vue où le labyrinthe est caché.
 
@@ -53,7 +53,7 @@ Lorsque le labyrinthe est caché, les déplacements du joueur laissent derrière
 
 \subsubsection*{Les joueurs du labyrinthe}
 
-L'affichage des joueurs (\ref{fig:PlayersInLabyrinth}) est géré par les classes \textbf{\textit{LabyrinthPanel.java}} et \textbf{\textit{Cell.java}}) en fonction de leurs positions dans le labyrinthe. Ils sont représentés par des rectangles de couleurs différentes qui changent de taille en fonction du nombre de joueurs présents sur une seule case. Nous avons choisi cette représentation car elle est simple et facile à comprendre d'un point de vue ergonomique.
+L'affichage des joueurs (\ref{fig:PlayersInLabyrinth}) est géré par les classes \textbf{\textit{LabyrinthPanel}} et \textbf{\textit{Cell}}) en fonction de leurs positions dans le labyrinthe. Ils sont représentés par des rectangles de couleurs différentes qui changent de taille en fonction du nombre de joueurs présents sur une seule case. Nous avons choisi cette représentation car elle est simple et facile à comprendre d'un point de vue ergonomique.
 
 \begin{figure}[!htb]
     \centering
@@ -93,7 +93,7 @@ L'affichage des joueurs (\ref{fig:PlayersInLabyrinth}) est géré par les classe
 
 \subsubsection*{Le décompte et le timer}
 
-Le décompte et le timer (\ref{fig:CountdownAndTimer}) sont affichés en haut au centre de chaque partie de jeu. Le décompte affiché en rouge au début de la partie permet aux joueurs de se préparer avant le début de la partie. Une fois le décompte terminé, le timer affiché en blanc commence à compter le temps écoulé depuis le début de la partie. Leurs affichage est géré par la classe \textbf{\textit{TimerPanel.java}}).
+Le décompte et le timer (\ref{fig:CountdownAndTimer}) sont affichés en haut au centre de chaque partie de jeu. Le décompte affiché en rouge au début de la partie permet aux joueurs de se préparer avant le début de la partie. Une fois le décompte terminé, le timer affiché en blanc commence à compter le temps écoulé depuis le début de la partie. Leurs affichage est géré par la classe \textbf{\textit{TimerPanel}}).
 
 \begin{figure}[!htb]%
     \centering
@@ -115,7 +115,7 @@ Le décompte et le timer (\ref{fig:CountdownAndTimer}) sont affichés en haut au
 
 \subsubsection*{Fin de jeu}
 
-Lorsque la partie est terminée, une fenêtre de fin de jeu (\ref{fig:GameOverWindow}) s'affiche avec le tableau des scores de chaque joueur avec des boutons en bas pour retourner au menu principal, rejouer et quitter le jeu. Cette fenêtre est gérée par la classe \textbf{\textit{GameOverPanel.java}} et \textbf{\textit{ScoreBoardPanel.java}}).
+Lorsque la partie est terminée, une fenêtre de fin de jeu (\ref{fig:GameOverWindow}) s'affiche avec le tableau des scores de chaque joueur avec des boutons en bas pour retourner au menu principal, rejouer et quitter le jeu. Cette fenêtre est gérée par la classe \textbf{\textit{GameOverPanel}} et \textbf{\textit{ScoreBoardPanel}}).
 
 \begin{figure}[!htb]%
     \centering
