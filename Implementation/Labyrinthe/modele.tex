@@ -1,11 +1,11 @@
 \subsubsection{Le Modèle}
 \label{subsubsec:modele}
 
-Nous avons une interface \textbf{\textit{LabyrinthModel}} avec son implémentation
-\textbf{\textit{LabyrinthModelImplementation}} qui servent à modéliser le Labyrinthe.
+Nous avons une interface \textbf{\textit{MazeModel}} avec son implémentation
+\textbf{\textit{MazeModelImplementation}} qui servent à modéliser le Labyrinthe.
 Afin de représenter le labyrinthe, nous avons utilisé une matrice de booléens
 où '\textit{true}' représente un chemin et '\textit{false}' représente un mur.
-% TODO: Ajouter une image du diagramme des classes de l'implémentation de l'interface \textbf{\textit{LabyrinthModel}}' et de son implémentation '\textbf{\textit{LabyrinthModelImplementation}}
+% TODO: Ajouter une image du diagramme des classes de l'implémentation de l'interface \textbf{\textit{MazeModel}}' et de son implémentation '\textbf{\textit{MazeModelImplementation}}
 
 Les labyrinthes sont générés grâce à un générateur qui est géré par
 l'interface \textbf{\textit{BoardGenerator}}' et son implémentation '\textbf{\textit{DepthFirstGenerator}}.
@@ -20,10 +20,10 @@ regrouper ces données avec la liste des joueurs.
 % TODO: Ajouter une image du diagramme des classes de l'implémentation de l'enum \textbf{\textit{GameMode}}' avec son implémentation '\textbf{\textit{GameModeData}}' et de la case '\textbf{\textit{GameData}}
 
 Les labyrinthes sont créés grâce aux méthodes de la classe
-\textbf{\textit{LabyrinthModelFactory}} qui se charge de mettre à disposition des méthodes
+\textbf{\textit{MazeModelFactory}} qui se charge de mettre à disposition des méthodes
 qui permettent de créer des labyrinthes de différentes tailles selon les modes
 de jeu.
-% TODO: Ajouter une image du diagramme des classes de l'implémentation de la classe \textbf{\textit{LabyrinthModelFactory}}
+% TODO: Ajouter une image du diagramme des classes de l'implémentation de la classe \textbf{\textit{MazeModelFactory}}
 
 En ce qui concerne les joueurs, nous avons une interface \textbf{\textit{Player}} avec son
 implémentation \textbf{\textit{PlayerImplementation}} qui permettent de représenter un
