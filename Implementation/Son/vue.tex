@@ -23,7 +23,9 @@ qui gèrent les autres.
 La classe \textbf{\textit{AudioMenu}} tient les ficelles de ce menu.
 
 \begin{figure}[!htb]
-    % @GitFenixZ : Add AudioMenu screenshot
+    \centering
+    \includegraphics[width=8cm]{ressources/Implementation/Son/AudioMenu.png}%
+    \caption{Image du menu Audio}%
     \label{fig:AudioMenu}
 \end{figure}
 
@@ -47,18 +49,21 @@ uniquement les fichiers audios qui intéressent l'utilisateur.
 \paragraph{La gestion des utilisateurs}
 Cette partie du menu se décompose en quatre éléments
 \begin{itemize}
-    % @GitFenixZ Rajouter les images
+    % @YanisLcn Bouger la section Sélection des utilisateurs dans la liste
     \item{Séléction des utilisateurs dans la liste}
-    \item{Ajouter un utilisateur} (\ref{subsubsec:sonVueAjoutModifUtilisateur})
-    \item{Modifier un utilisateur} (\ref{subsubsec:sonVueAjoutModifUtilisateur})
+    \item{Ajouter un utilisateur}
+    \vcenteredinclude[height=5mm]{ressources/Implementation/Son/add-user.png}
+    \item{Modifier un utilisateur}
+    \vcenteredinclude[height=5mm]{ressources/Implementation/Son/edit.png}
     \item{Supprimer un utilisateur}
+    \vcenteredinclude[height=5mm]{ressources/Implementation/Son/delete-button.png}
 \end{itemize}
 
 \paragraph{La gestion des fichiers audios}
 Sans compter le bouton de retour au menu principal, cette partie du menu se
 décompose en 8 éléments
 \begin{itemize}
-    % @GitFenixZ Rajouter les images
+    % @YanisLcn Voir GestionFichiersAudio.png
     \item{Le choix du mot}
     \item{Le nombre d'audios enregistrés}
     \item{La durée totale déjà enregistrée}
@@ -97,7 +102,9 @@ et \texttt{Save}. La classe \textbf{\textit{EditCreateUsersPage}} gère ces
 pages.
 
 \begin{figure}[!htb]
-    % @GitFenixZ : Add Add/Modify User Page screenshot
+    \centering
+    \includegraphics[width=8cm]{ressources/Implementation/Son/AddEditUser.png}%
+    \caption{Image de la page d'ajout/de modification d'un utilisateur}
     \label{fig:CreateOrSaveUserPage}
 \end{figure}
 
@@ -119,6 +126,8 @@ Si le bouton \texttt{Discard All} est cliqué, alors tous les audios enregistré
 depuis le début de la "session" sont supprimés après confirmation de l'utilisateur.
 
 \begin{figure}[!htb]
-    % @GitFenixZ : Add Record Page screenshot
+    \centering
+    \includegraphics[width=8cm]{ressources/Implementation/Son/RecordPage.png}%
+    \caption{Image de la page d'enregistrement}
     \label{fig:RecordPage}
 \end{figure}
