@@ -5,7 +5,6 @@
 
 \usepackage{hyperref}
 
-
 \usepackage{amsmath}
 \usepackage{amssymb} 
 \usepackage{amsthm}  
@@ -15,13 +14,21 @@
 
 
 \usepackage{lmodern}
+\usepackage{forest}
 \usepackage{geometry}
 \usepackage{graphicx, enumitem}
 
 \usepackage{caption}
-\usepackage{subfig}
+\usepackage{subcaption}
 
+\usepackage{placeins}
 
+% define a new command for vertically centered images
+\newcommand{\vcenteredinclude}[2][]{%
+    \begingroup
+    \setbox0=\hbox{\includegraphics[#1]{#2}}%
+    \parbox{\wd0}{\raisebox{\dimexpr.5\ht0-.5\dp0}{\box0}}%
+    \endgroup}
 
 \begin{document}
 
@@ -38,6 +45,5 @@
 \input{Implementation}
 \input{Resultats}
 \input{Conclusion}
-
 
 \end{document}
