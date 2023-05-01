@@ -15,10 +15,10 @@ Pour créer les modèles, nous avons tout d'abord besoin des paramètres fournit
 
 Ensuite, nous allons utiliser deux programmes afin d'améliorer la modélisation :
 \begin{itemize}
-      \item  \textit{\textbf{EnergyDetector}} qui prend des paramètres d'audios et qui renvoie dans un fichier label les différents moments où
-            l'interlocuteur parle (pour les différencier à quand il ne parle pas), d'extension \textit{.lbl}.
-      \item\textit{\textbf{ NormFeat }} qui prend les labels et les paramètres des audios afin de les normaliser, et qui renvoie de
-            nouveaux paramètres normalisés d'extension \textit{.norm.prm}.
+    \item\textit{\textbf{EnergyDetector}} qui prend des paramètres d'audios et qui renvoie dans un fichier label les différents moments où
+    l'interlocuteur parle (pour les différencier à quand il ne parle pas), d'extension \textit{.lbl}.
+    \item\textit{\textbf{NormFeat}} qui prend les labels et les paramètres des audios afin de les normaliser, et qui renvoie de
+    nouveaux paramètres normalisés d'extension \textit{.norm.prm}.
 \end{itemize}
 
 
@@ -27,7 +27,7 @@ On procède alors à la modélisation du monde avec tout les paramètres du mond
 
 Pour cela, on utilise le programme TrainWorld de \textit{  LIA\_SpkDet}.
 
-A l'aide du modèle du monde, et des paramètres normalisés des interlocuteurs ainsi que des labels, on crée leur modèles, qui seront aussi des \textbf{GMM},
+A l'aide du modèle du monde, et des paramètres normalisés des interlocuteurs ainsi que des labels, on crée leurs modèles, qui seront aussi des \textbf{GMM},
 d'extension \textit{.gmm}.
 our cela, on utilise le programme TrainTarget de \textit{ LIA\_SpkDet}.
 
@@ -40,7 +40,7 @@ Pour cela, on utilise le programme ComputeScore de \textit{LIA\_SpkDet}.
 
 
 Ce programme va prendre dans un fichier, les audios à comparer, suivis des interlocuteurs qu'on veut essayer de reconnaître. Il donnera à la fin dans un \textit{.txt}
- toutes les données de comparaison et donc une valeur de comparaison.
+toutes les données de comparaison et donc une valeur de comparaison.
 
 Pour reconnaître un interlocuteur, on utilise toutes les valeurs données, afin de tirer l'interlocuteur qui a la valeur maximum de comparaison, et dépassant
 un certain seuil (choisir arbitrairement selon les tests résultant).
@@ -64,7 +64,7 @@ La reconnaissance, enfin, se fait en comparant tous les modèles des interlocute
 
 
 \paragraph*{Intégration en Java} : \\
-Afin de gérer toute la partie audio, nous avons créer une classe \textbf{\textit{ModelManager}} qui s'occupe de la modélisation et de la reconnaissance. Elle
+Afin de gérer toute la partie audio, nous avons créé une classe \textbf{\textit{ModelManager}} qui s'occupe de la modélisation et de la reconnaissance. Elle
 peut exécuter les programmes de \textit{ALIZÉ} et de \textit{SPro} grâce à la classe \textbf{\textit{RunSH}}. L'objectif de \textbf{\textit{ModelManager}}
 est, non seulement l'exécution des programmes, mais aussi la gestion des fichiers et des listes de fichiers à utiliser pour la modélisation et la
 reconnaissance.
