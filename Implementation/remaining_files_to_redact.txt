@@ -1,0 +1,26 @@
+Liste des fichiers à modéliser sur un diagramme de classes.
+
+# CONTROLLER
+src/main/java/com/gytmy/labyrinth/controller/KeyboardMovementController.java
+src/main/java/com/gytmy/labyrinth/controller/LabyrinthController.java
+src/main/java/com/gytmy/labyrinth/controller/LabyrinthControllerImplementation.java
+src/main/java/com/gytmy/labyrinth/controller/MovementController.java
+
+# VIEW
+
+src/main/java/com/gytmy/labyrinth/view/settings/gamemode/DefaultComponentBuilder.java
+
+#SOUND
+## Modele
+src/main/java/com/gytmy/sound/AudioFileManager.java
+src/main/java/com/gytmy/sound/AudioPlayer.java
+src/main/java/com/gytmy/sound/AudioRecorder.java
+src/main/java/com/gytmy/sound/AudioToFile.java
+src/main/java/com/gytmy/sound/PlayingTimer.java
+src/main/java/com/gytmy/sound/User.java
+src/main/java/com/gytmy/sound/YamlReader.java
+
+## Vue
+src/main/java/com/gytmy/labyrinth/view/EditCreateUsersPage.java
+src/main/java/com/gytmy/labyrinth/view/RecordPage.java
+src/main/java/com/gytmy/labyrinth/view/AudioMenu.java

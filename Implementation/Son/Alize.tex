@@ -1,0 +1,78 @@
+\subsubsection{Alizé}
+\label{sec:alizeImpl}
+
+
+\paragraph*{Modélisation} : \\
+
+Afin de reconnaître un utilisateur, nous avons tout d'abord besoin de modèles.
+Un modèle pour le monde qui prend les paramètres du plus d'audios possible pour enrichir son environnement.
+Un modèle pour l'interlocuteur qui prend les paramètres du plus d'audios possible pour un interlocuteur.
+
+Le modèle du monde permet de créer le modèle de l'interlocuteur, en lui donnant l'environnement dans lequel il est.
+Plus les modèles sont enrichis, et plus ils seront efficaces.
+
+Pour créer les modèles, nous avons tout d'abord besoin des paramètres fournit par \textit{SPro}.
+
+Ensuite, nous allons utiliser deux programmes afin d'améliorer la modélisation :
+\begin{itemize}
+    \item\textit{\textbf{EnergyDetector}} qui prend des paramètres d'audios et qui renvoie dans un fichier label les différents moments où
+    l'interlocuteur parle (pour les différencier à quand il ne parle pas), d'extension \textit{.lbl}.
+    \item\textit{\textbf{NormFeat}} qui prend les labels et les paramètres des audios afin de les normaliser, et qui renvoie de
+    nouveaux paramètres normalisés d'extension \textit{.norm.prm}.
+\end{itemize}
+
+
+On procède alors à la modélisation du monde avec tout les paramètres du monde normalisés et des labels, afin d'obtenir son modèle qui est un \textbf{GMM}
+(Gaussian Mixture Model), et qui a comme extension \textit{.gmm}.
+
+Pour cela, on utilise le programme TrainWorld de \textit{  LIA\_SpkDet}.
+
+A l'aide du modèle du monde, et des paramètres normalisés des interlocuteurs ainsi que des labels, on crée leurs modèles, qui seront aussi des \textbf{GMM},
+d'extension \textit{.gmm}.
+our cela, on utilise le programme TrainTarget de \textit{ LIA\_SpkDet}.
+
+
+\paragraph*{Reconnaissance} : \\
+
+Maintenant que les modèles des interlocuteurs sont créés, on va les utiliser pour reconnaître un interlocuteur.
+
+Pour cela, on utilise le programme ComputeScore de \textit{LIA\_SpkDet}.
+
+
+Ce programme va prendre dans un fichier, les audios à comparer, suivis des interlocuteurs qu'on veut essayer de reconnaître. Il donnera à la fin dans un \textit{.txt}
+toutes les données de comparaison et donc une valeur de comparaison.
+
+Pour reconnaître un interlocuteur, on utilise toutes les valeurs données, afin de tirer l'interlocuteur qui a la valeur maximum de comparaison, et dépassant
+un certain seuil (choisir arbitrairement selon les tests résultant).
+
+Cet utilisateur sera donc celui qui est reconnu.
+
+
+\paragraph*{Utilisation dans le projet} : \\
+Dans notre jeu, on réalise toutes les étapes précédentes, en prenant en compte la gestion de fichiers de notre jeu. Les listes utilisées pour la modélisation,
+afin de fournir les informations au programme de quels audios paramétriser, normaliser et modéliser, sont actualisés au moment où la modélisation a besoin
+d'être faite (c'est-à-dire quand il y a une modification dans les audios).
+
+Lors de cette étape, tout les audios sont paramétrisés et normalisés, le modèle du monde est créé avec tout les audios disponibles.
+Les modèles des interlocuteurs (ou des mots d'interlocuteur) sont à la suite créé avec les audios séparés par utilisateur (et par mot) dans le gestionnaire.
+
+La modélisation se fait dans fichier \textit{ src/main/exe/model} qui contient tout les répertoire séparant la modélisation.
+
+La reconnaissance, enfin, se fait en comparant tous les modèles des interlocuteurs avec les paramètres normalisés de l'audio émis pour une commande dans la partie : currentAudio.
+
+À la fin, si un interlocuteur qui a la valeur la plus haute de comparaison, atteint un certain seuil, ce joueur jouera la commande donnée.
+
+
+\paragraph*{Intégration en Java} : \\
+Afin de gérer toute la partie audio, nous avons créé une classe \textbf{\textit{ModelManager}} qui s'occupe de la modélisation et de la reconnaissance. Elle
+peut exécuter les programmes de \textit{ALIZÉ} et de \textit{SPro} grâce à la classe \textbf{\textit{RunSH}}. L'objectif de \textbf{\textit{ModelManager}}
+est, non seulement l'exécution des programmes, mais aussi la gestion des fichiers et des listes de fichiers à utiliser pour la modélisation et la
+reconnaissance.
+Ces fonctions sont partagées avec la classe \textbf{\textit{AudioManager}} qui s'occupe de la partie audio.
+
+Comment obtenir un résultat? Une fois que \textit{ALIZÉ} a fait son travail il faut interpréter le résultat. Ce procédé est réalisé par les classes
+\textbf{\textit{AlizeRecognitionResultParse}}, qui s'occupe purement de parser le résultat de la reconnaissance, et \textbf{\textit{AudioRecognitionResult}}
+qui s'occupe de la gestion des résultats de reconnaissance.
+
+
+%TODO: insert more information and more details about the implementation of the audio recognition

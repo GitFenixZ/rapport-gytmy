@@ -274,3 +274,11 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# IDE
+.vscode
+.idea
+.DS_Store 
+
+# PdfM
+Main.pdf
