@@ -5,12 +5,23 @@ Afin de garantir le bon fonctionnement de notre application, nous avons impléme
 
 \paragraph{Les mouvements}
 
-% TODO: Parler des contrôleurs de mouvements
-Cette section sera rédigée ultérieurement.
+Nous avons décidé de créer une interface \textbf{\textit{MovementController}} qui est implémentée par \textbf{\textit{MazeControllerImplementation}}. Cette interface
+contient toutes les méthodes qui permettent de gérer les mouvements du joueur.
+
+
+Pour déplacer les joueurs nous utilisons principalement la voix, mais nous donnons aussi au jouer le choix d'utiliser le clavier. Pour gérer ce deu types de mouvement
+nous utilisons deux classes:
+\begin{itemize}
+    \item \textbf{\textit{VoiceMovementController}} qui permet de gérer les mouvements du joueur avec la voix
+    \item \textbf{\textit{KeyboardMovementCOntroller}} qui permet de gérer les mouvements du joueur avec le clavier
+\end{itemize}
+Ces deux classes sont utilisées en composition dans la classe \textbf{\textit{MazeControllerImplementation}} qui permet de gérer les mouvements du joueur en fonction du mode de jeu choisi.
+
 
 \paragraph{Les menus}
 
 Afin de gérer la fenêtre de notre jeu et de naviguer entre les différents menus, nous avons créé la classe \textbf{\textit{MenuFrameHandler}}. Cette classe se charge de changer le \textbf{\textit{JPanel}} de la fenêtre principale de notre application, qui est une \textbf{\textit{JFrame}}.
+
 
 \paragraph{L'écran d'accueil} (\ref{fig:StartMenu})
 
