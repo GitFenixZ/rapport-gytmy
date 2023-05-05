@@ -1,29 +1,25 @@
 \subsection{Reconnaissance de la parole}
 \label{subsec:Reconnaissance_parole}
 
-Une fois que nous avons réussi a reconnaître l'individu l'objectif est de savoir la commande qu'il a donné. Pour cela nous utilisons la reconnaissance de la parole
-grâce à la librairie \textit{Whisper}.
+Une fois que nous avons réussi à reconnaître l'individu, l'objectif est de savoir la commande qu'il a donnée. Pour cela, nous utilisons la reconnaissance de la 
+parole grâce à la bibliothèque \textit{Whisper (FasterWhisper)}.
 
-\subsubsection*{Whisper}
+\subsubsection*{Whisper (FasterWhisper)}
 
-\textit{OpenAI} a conçu \textbf{un modèle de reconnaissance vocale} de pointe nommé \textit{Whisper}, formé sur un vaste ensemble de données audio diversifiées.
-\textit{Whisper} est \textbf{un modèle multitâche} qui gère plusieurs tâches, telles que la reconnaissance vocale multilingue,
-la traduction automatique de la parole et l'identification de la langue.
+\textit{OpenAI} a conçu \textbf{un modèle de reconnaissance vocale} de pointe nommé \textit{Whisper}, formé sur un vaste ensemble de données audio diversifiées. 
+\textit{Whisper} est \textbf{un modèle multitâche} qui gère plusieurs tâches, telles que la reconnaissance vocale multilingue, la traduction automatique de la parole et 
+l'identification de la langue. Cependant, il s'avère qu'on pouvait optimiser le fonctionnement de ce dernier pour parvenir à un traitement quasi-instantané ($\approx$ 1-2s) 
+plutôt que d'attendre plus longtemps entre chaque réponse ($\approx$ 15-20s) dans le cas d'une taille de modèle identique. C'est justement pour cela que nous avons opté pour \textit{FasterWhisper}.
 
 \subsubsection*{Avantages et limites}
-Le modèle \textit{Whisper} offre de nombreux atouts. Il est \textbf{extrêmement polyvalent}, applicable à un large éventail de cas d'utilisation.
-De plus, il \textbf{fonctionne sur une grande variété d'appareils}. Cependant, ce modèle de reconnaissance vocale présente aussi des limites.
-L'une des principales contraintes est sa \textbf{consommation importante de puissance de traitement} pour un fonctionnement optimal,
-ce qui peut restreindre son utilisation sur des appareils aux capacités de traitement limitées.
-Par ailleurs, même si \textit{Whisper} peut opérer en mode hors ligne, il requiert tout de même une connexion Internet pour la traduction
-de la parole et l'identification de la langue (ce qui n'est pas utilisé dans notre projet).
+Le modèle \textit{Whisper} offre de nombreux atouts. Il est \textbf{extrêmement polyvalent}, applicable à un large éventail de cas d'utilisation. De plus, il \textbf{fonctionne 
+sur une grande variété d'appareils}. Cependant, ce modèle de reconnaissance vocale présente aussi des limites. L'une des principales contraintes est sa \textbf{consommation 
+importante de puissance de traitement} pour un fonctionnement optimal, ce qui peut restreindre son utilisation sur des appareils aux capacités de traitement limitées. 
+Par ailleurs, même si \textit{Whisper} peut opérer en mode hors ligne, il requiert tout de même une connexion Internet pour la traduction de la parole et l'identification de la langue (ce qui n'est pas utilisé dans notre projet).
 
 \subsubsection*{Alternatives}
+\textit{Whisper} peut être employé dans diverses applications, telles que les assistants virtuels multilingues, la traduction de la parole et la transcription de conférences. 
+Cependant, il existe \textbf{plusieurs alternatives à ce modèle, comme \textit{Google Speech-to-Text}, \textit{Amazon Transcribe} et \textit{Microsoft Azure Speech Services}}. 
+Chacun de ces modèles a ses avantages et ses inconvénients, et le choix dépendra des besoins spécifiques de chaque cas d'utilisation.
 
-\textit{Whisper} peut être employé dans diverses applications, telles que les assistants virtuels multilingues,
-la traduction de la parole et la transcription de conférences. Cependant, il existe
-\textbf{plusieurs alternatives à ce modèle, comme \textit{Google Speech-to-Text}, \textit{Amazon Transcribe} et \textit{Microsoft Azure Speech Services}}.
-Chacun de ces modèles a ses avantages et ses inconvénients, et le choix dépendra des besoins spécifiques de chaque cas d'utilisation.\\
-
-En définitive, le modèle de reconnaissance vocale \textit{Whisper} d'\textit{OpenAI} offre \textbf{des bénéfices notables} pour les tâches de \textbf{
-    reconnaissance vocale} pertinentes dans le cadre de notre projet.
+En définitive, le modèle de reconnaissance vocale \textit{Whisper} d'\textit{OpenAI} offre \textbf{des bénéfices notables} pour les tâches de \textbf{reconnaissance vocale} pertinentes dans le cadre de notre projet.
