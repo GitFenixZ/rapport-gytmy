@@ -117,6 +117,29 @@ Le décompte et le timer (\ref{fig:CountdownAndTimer}) sont affichés en haut au
 \end{figure}
 \FloatBarrier
 
+\subsubsection*{Les indicateurs}
+
+\newcommand*\keystroke[1]{%
+    \tikz[baseline=(key.base)]
+    \node[%
+        draw,
+        fill=white,
+        drop shadow={shadow xshift=0.25ex,shadow yshift=-0.25ex,fill=black,opacity=0.75},
+        rectangle,
+        rounded corners=2pt,
+        inner sep=1pt,
+        line width=0.5pt,
+        font=\scriptsize\sffamily
+    ](key) {#1\strut}
+    ;
+}
+
+L'affichage graphique du labyrinthe (\ref{fig:ClassicModeLabyrinth}) contient un indicateur sur chaque extrêmité du bandeau supérieur.
+L'indicateur du coin supérieur gauche représente le status du micro et de l'enregistrement audio.
+Celui du coin supérieur droit représente, quant à lui, si le déplacement des joueurs dans le labyrinthe via le clavier est activé.
+Il est possible d'activer chacune des icônes en cliquant dessus, ou bien d'utiliser les touches \keystroke{\hspace{1cm}}(SpaceBar) et \keystroke{ T }
+respectivement pour débuter l'enregistrement audio et activer/désactiver les déplacements via le clavier.
+
 \subsubsection*{Fin de jeu}
 
 Lorsque la partie est terminée, une fenêtre de fin de jeu (\ref{fig:GameOverWindow}) s'affiche avec le tableau des scores de chaque joueur avec des boutons en bas pour retourner au menu principal, rejouer et quitter le jeu. Cette fenêtre est gérée par la classe \textbf{\textit{GameOverPanel}} et \textbf{\textit{ScoreBoardPanel}}.
