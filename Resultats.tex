@@ -1,10 +1,15 @@
 \section{Résultats}
 \label{sec:resultats}
 
-Nous avons réussi a développer un jeu capable de discriminer les joueurs et d'interpréter les paroles prononcées comme des commandes, c'est-à-dire, comme des
-actions à exécuter. Ainsi, le joueur peut se déplacer dans le labyrinthe juste avec sa voix. Toute la gestion des modèles est faite à l'intérieur du jeu, nous
-n'avons donc pas besoin de lancer un autre programme pour enregistrer la voix ou pour générer les modèles. Le délai de réponse est assez rapide, le joueur
-peut se déplacer dans le labyrinthe sans avoir à attendre généralement plus de 6 secondes après avoir prononcé une commande. De plus, nous avons réussi à faire
-en sorte que le jeu n'ai pas besoin d'accès à internet pour fonctionner, même si certaines fonctionnalités de \textit{Whisper} en ont besoin.
+En ayant testé sur des audios de tests réalisés par nous même, disponible dans le dossier \textit{DataBaseOfWords}, un taux de discrimition de l'utilisateur d'environ 60\% pour un total d'environ 400 audios testés (certains utilisateurs ne sont pas du tout reconnus, alors que d'autres si).
 
-% TODO: Add more info
+Nous avons donc réussi a développer un jeu capable de discriminer, plus que le hasard, la parole des joueurs dans une partie grâce à ALIZE et d'interpréter les paroles prononcées comme des commandes grâce à Whisper, c'est-à-dire comme des
+actions à exécuter. 
+
+Ainsi, le joueur peut se déplacer dans le labyrinthe juste avec sa voix si il est bien reconnus. 
+
+Toute la gestion des modèles est faite à l'intérieur du jeu, nous n'avons donc pas besoin de lancer un autre programme pour enregistrer la voix ou pour générer les modèles. 
+Le délai de réponse est assez rapide, le joueur peut se déplacer dans le labyrinthe sans avoir à attendre généralement plus de 3 secondes après avoir prononcé une commande. 
+
+Enfin, nous avons réussi à faire en sorte que le jeu n'ai pas besoin d'accès à internet pour fonctionner, même si certaines fonctionnalités de \textit{Whisper} en ont besoin,
+et aussi à réduire la demande en ressource de l'ordinateur qui exécute le programme, permettant une certaine stabilité pour les ordinateur pas forcément performant.
