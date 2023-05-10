@@ -18,7 +18,13 @@ Les labyrinthes sont générés grâce à un générateur qui est géré par l'i
 \textbf{\textit{BoardGenerator}}' et son implémentation
 '\textbf{\textit{DepthFirstGenerator}}. L'algorithme de génération utilisé est
 le Randomized Depth-First Search.
-% TODO: Ajouter une image du diagramme des classes de l'implémentation de l'interface \textbf{\textit{BoardGenerator}}' et de son implémentation '\textbf{\textit{DepthFirstGenerator}}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=8cm]{ressources/Implementation/Labyrinthe/Modele/DepthFirstGenerator.png}
+    \caption{L'interface MazeModel et son implémentation MazeModelImplementation}
+    \label{fig:MazeModelAndImplementation}
+\end{figure}
 
 L'enum \textbf{\textit{GameMode}} permet de définir les différents modes de
 jeu. Chaque type de jeu a sa propre implémentation de l'interface
