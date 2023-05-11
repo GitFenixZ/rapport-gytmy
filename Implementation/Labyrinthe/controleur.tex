@@ -5,12 +5,23 @@ Afin de garantir le bon fonctionnement de notre application, nous avons impléme
 
 \paragraph{Les mouvements}
 
-% TODO: Parler des contrôleurs de mouvements
-Cette section sera rédigée ultérieurement.
+Nous avons décidé de créer une interface \textbf{\textit{MazeController}} qui est implémentée par \textbf{\textit{MazeControllerImplementation}}. Cette interface
+contient toutes les méthodes qui permettent de gérer les mouvements du joueur.
+
+
+Pour déplacer les joueurs nous utilisons principalement la voix, mais nous donnons aussi au jouer le choix d'utiliser le clavier. Pour gérer ces deux types de mouvements
+nous utilisons deux classes:
+\begin{itemize}
+    \item \textbf{\textit{VoiceMovementController}} qui permet de gérer les mouvements du joueur avec la voix
+    \item \textbf{\textit{KeyboardMovementController}} qui permet de gérer les mouvements du joueur avec le clavier
+\end{itemize}
+Ces deux classes sont utilisées en composition dans la classe \textbf{\textit{MazeControllerImplementation}} qui permet de gérer les mouvements du joueur.
+
 
 \paragraph{Les menus}
 
 Afin de gérer la fenêtre de notre jeu et de naviguer entre les différents menus, nous avons créé la classe \textbf{\textit{MenuFrameHandler}}. Cette classe se charge de changer le \textbf{\textit{JPanel}} de la fenêtre principale de notre application, qui est une \textbf{\textit{JFrame}}.
+
 
 \paragraph{L'écran d'accueil} (\ref{fig:StartMenu})
 
@@ -126,9 +137,26 @@ Tout d'abord, pour ajouter un joueur, on clique sur une case "+". Une case de co
     \label{fig:PlayerSelection}
 \end{figure}
 \FloatBarrier
-
 \paragraph{Lancement de la partie}
-
 Pour lancer la partie on clique sur le bouton
 \vcenteredinclude[height=5mm]{ressources/Implementation/Labyrinthe/Controleur/StartButton.png}
-après que tous les joueurs soient prêts et que les paramètres précédents aient été choisis.
+après que tous les joueurs soient prêts et que les paramètres précédents aient été choisis. Une fois la partie lancé on procède à la reconnaissance
+des joueurs. Avant de commencer a déplacer les personnages il faut que chaque jouer se fasse reconnaître par le jeu. À cette fin nous avons mis en place un
+menu qui permet de s'enregistrer jusqu'à 3 fois. Si le joueur n'est pas reconnu après 3 tentatives, il est éliminé de la partie. Ce menu est géré par la
+classe \textbf{\textit{RecognizeUserPage}}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{ressources/Implementation/Labyrinthe/Vue/Recognize.png}%
+    \caption{Reconnaissance des joueurs}
+    \label{fig:Recognition}
+\end{figure}
+
+
+\paragraph{Diagramme de classes pour le controleur}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=12cm]{ressources/Implementation/Labyrinthe/Controleur/MazeController.png}%
+    \caption{Diagramme de classes du controleur}
+    \label{fig:Controleur}
+\end{figure}
+

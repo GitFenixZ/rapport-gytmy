@@ -65,19 +65,19 @@ L'affichage des joueurs (\ref{fig:PlayersInLabyrinth}) est géré par les classe
     \qquad
     \begin{subfigure}{2.2cm}
         \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/2Players.png}%
-        \caption{2 joueur}
+        \caption{2 joueurs}
         \label{fig:2Players}
     \end{subfigure}
     \qquad
     \begin{subfigure}{2.2cm}
         \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/3Players.png}%
-        \caption{3 joueur}
+        \caption{3 joueurs}
         \label{fig:3Players}
     \end{subfigure}
     \qquad
     \begin{subfigure}{2.2cm}
         \includegraphics[width=2.2cm]{ressources/Implementation/Labyrinthe/Vue/Players/4Players.png}%
-        \caption{4 joueur}
+        \caption{4 joueurs}
         \label{fig:4Players}
     \end{subfigure}
     \qquad
@@ -91,6 +91,8 @@ L'affichage des joueurs (\ref{fig:PlayersInLabyrinth}) est géré par les classe
 \end{figure}
 \FloatBarrier
 
+Nous avons en bas du labyrinthe une banderole qui indique le joueur qui doit jouer.
+Cette banderole est gérée par la classe \textbf{\textit{PlayerInfoPanel}}.
 \subsubsection*{Le décompte et le timer}
 
 Le décompte et le timer (\ref{fig:CountdownAndTimer}) sont affichés en haut au centre de chaque partie de jeu. Le décompte affiché en rouge au début de la partie permet aux joueurs de se préparer avant le début de la partie. Une fois le décompte terminé, le timer affiché en blanc commence à compter le temps écoulé depuis le début de la partie. Leurs affichage est géré par la classe \textbf{\textit{TimerPanel}}.
@@ -113,9 +115,32 @@ Le décompte et le timer (\ref{fig:CountdownAndTimer}) sont affichés en haut au
 \end{figure}
 \FloatBarrier
 
+\subsubsection*{Les indicateurs}
+
+\newcommand*\keystroke[1]{%
+    \tikz[baseline=(key.base)]
+    \node[%
+        draw,
+        fill=white,
+        drop shadow={shadow xshift=0.25ex,shadow yshift=-0.25ex,fill=black,opacity=0.75},
+        rectangle,
+        rounded corners=2pt,
+        inner sep=1pt,
+        line width=0.5pt,
+        font=\scriptsize\sffamily
+    ](key) {#1\strut}
+    ;
+}
+
+L'affichage graphique du labyrinthe (\ref{fig:ClassicModeLabyrinth}) contient un indicateur sur chaque extrêmité du bandeau supérieur.
+L'indicateur du coin supérieur gauche représente le status du micro et de l'enregistrement audio.
+Celui du coin supérieur droit représente, quant à lui, si le déplacement des joueurs dans le labyrinthe via le clavier est activé.
+Il est possible d'activer chacune des icônes en cliquant dessus, ou bien d'utiliser les touches \keystroke{\hspace{1cm}}(SpaceBar) et \keystroke{ T }
+respectivement pour débuter l'enregistrement audio et activer/désactiver les déplacements via le clavier.
+
 \subsubsection*{Fin de jeu}
 
-Lorsque la partie est terminée, une fenêtre de fin de jeu (\ref{fig:GameOverWindow}) s'affiche avec le tableau des scores de chaque joueur avec des boutons en bas pour retourner au menu principal, rejouer et quitter le jeu. Cette fenêtre est gérée par la classe \textbf{\textit{GameOverPanel}} et \textbf{\textit{ScoreBoardPanel}}.
+Lorsque la partie est terminée, après une courte animation de transition, une fenêtre de fin de jeu (\ref{fig:GameOverWindow}) s'affiche avec le tableau des scores de chaque joueur avec des boutons en bas pour retourner au menu principal, rejouer et quitter le jeu. Cette fenêtre est gérée par la classe \textbf{\textit{GameOverPanel}} et \textbf{\textit{ScoreBoardPanel}}.
 
 \begin{figure}[!htb]%
     \centering
@@ -126,4 +151,9 @@ Lorsque la partie est terminée, une fenêtre de fin de jeu (\ref{fig:GameOverWi
 \FloatBarrier
 
 \subsubsection*{Diagramme de classe de la vue}
-% TODO: Insérer une image du diagramme de classe de la vue pour les fichiers mentionnés.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{ressources/Implementation/Labyrinthe/Vue/DefaultComponentBuilder.png}%
+    \caption{La classe DefaultComponentBuilder}%
+    \label{fig:MazeViewClassDiagram}
+\end{figure}
