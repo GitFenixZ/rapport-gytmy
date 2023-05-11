@@ -6,12 +6,11 @@
 \usepackage{hyperref}
 
 \usepackage{amsmath}
-\usepackage{amssymb} 
-\usepackage{amsthm}  
+\usepackage{amssymb}
+\usepackage{amsthm}
 
 \usepackage{float}
 \usepackage{wrapfig}
-
 
 \usepackage{lmodern}
 \usepackage{forest}
@@ -29,8 +28,7 @@
 \newcommand{\vcenteredinclude}[2][]{%
     \begingroup
     \setbox0=\hbox{\includegraphics[#1]{#2}}%
-    \parbox{\wd0}{\raisebox{\dimexpr.5\ht0-.5\dp0}{\box0}}%
-    \endgroup}
+    \parbox{\wd0}{\raisebox{\dimexpr.5\ht0-.5\dp0}{\box0}}\endgroup}%
 
 \begin{document}
 
@@ -47,6 +45,7 @@
 \input{Resume}
 \input{Etat_de_lart}
 \input{Implementation}
+\input{DataBase}
 \input{Resultats}
 \input{Conclusion}
 
