@@ -19,7 +19,7 @@ charge l'exécution du script bash et la récupération du résultat de la
 transcription. Une fois le processus effectué par \textit{FasterWhisper}, le
 texte transcrit est récupéré à l'aide d'un parseur JSON provenant de la
 bibliothèque Jackson, préalablement intégrée au projet. Ce parseur exploite le
-modèle \textbf{WhisperResult.java}, faisant office de structure pour le fichier
+modèle \textbf{WhisperResult}, faisant office de structure pour le fichier
 JSON, pour atteindre son objectif. Tout cela se fait de manière
 \textit{Thread-Safe}, pour éviter les problèmes de concurrence. La classe
 \textbf{ThreadedQueue.java} est utilisée pour gérer un système de file
