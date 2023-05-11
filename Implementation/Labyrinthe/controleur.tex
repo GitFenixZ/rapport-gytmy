@@ -142,4 +142,15 @@ Tout d'abord, pour ajouter un joueur, on clique sur une case "+". Une case de co
 
 Pour lancer la partie on clique sur le bouton
 \vcenteredinclude[height=5mm]{ressources/Implementation/Labyrinthe/Controleur/StartButton.png}
-après que tous les joueurs soient prêts et que les paramètres précédents aient été choisis.
+après que tous les joueurs soient prêts et que les paramètres précédents aient été choisis. Une fois la partie lancé on procède à la reconnaissance
+des joueurs. Avant de commencer a déplacer les personnages il faut que chaque jouer se fasse reconnaître par le jeu. À cette fin nous avons mis en place un
+menu qui permet de s'enregistrer jusqu'à 3 fois. Si le joueur n'est pas reconnu après 3 tentatives, il est éliminé de la partie. Ce menu est géré par la
+classe \textbf{\textit{RecognizeUserPage}}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=10cm]{ressources/Implementation/Labyrinthe/Vue/Recognize.png}%
+    \caption{Reconnaissance des joueurs}
+    \label{fig:Recognition}
+
+\end{figure}
